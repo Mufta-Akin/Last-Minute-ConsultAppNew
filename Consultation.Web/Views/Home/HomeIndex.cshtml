@@ -1,0 +1,51 @@
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+
+<div class="jumbotron text-center">
+    <h1 class="display-4">Welcome</h1>
+</div>
+
+<div class="text-center">
+    <h6>Partially Automated Smart Health Online Consultation App Using Matching Algorithm.</h6>
+    <h2 class="text-info">Please log in to your profile</h2>
+</div>
+
+<hr />
+
+<div class=" text-center ">
+    <div class="row justify-center">
+        <div class="col-md-3">
+            <a class="btn btn-primary mt-5" asp-controller="User" asp-action="Login"><h2>Patient Login</h2></a>
+        </div>
+
+        <div class="col-md-3">
+            <a class="btn btn-primary mt-5" asp-controller="User" asp-action="Login"><h2>Doctor Login</h2></a>
+        </div>
+
+        <div class="col-md-3">
+            <a class="btn btn-primary mt-5" asp-controller="User" asp-action="Login"><h2>Staff Login</h2></a>
+        </div>
+
+        <div class="col-md-3">
+            <a class="btn btn-primary mt-5" asp-controller="User" asp-action="Login"><h2>Admin Login</h2></a>
+        </div>
+    </div>
+</div>
+
+
+<div asp-authorize class="card">
+    <div class="card-body">
+        <h4 class="card-title">Authorized</h4>
+        <p class="card-text">This content is only visible if you are Authorized.</p>
+
+        <p asp-roles="Patient">This content is only visible if you are authenticated and have the <span class="text-primary">Patient</span> role</p>
+        <p asp-roles="Doctor">This content is only visible if you are authenticated and have the <span class="text-danger">Doctor</span> role</p>
+        <p asp-roles="Admin">This content is only visible if you are authenticated and have the <span class="text-danger">Admon</span> role</p>
+        <p asp-roles="Admin,Doctor">This content is visible if you have the <span class="text-danger">Admin or Doctor</span> roles</p>
+
+    </div>
+</div>
+
+

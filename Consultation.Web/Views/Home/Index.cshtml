@@ -1,0 +1,29 @@
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+</div>
+
+<div class="text-center">
+    <p>Partially Automated Smart Health Online Consultation App Using Data Matching Algorithm.</p>
+    
+</div>
+
+
+<div asp-authorize class="card">
+    <div class="card-body">
+        <h4 class="card-title">Authorized</h4>
+        <p class="card-text">This content is only visible if you are Authorized.</p>
+
+        <p asp-roles="Patient">This content is only visible if you are authenticated and have the <span class="text-primary">Patient</span> role</p>
+        <p asp-roles="Doctor">This content is only visible if you are authenticated and have the <span class="text-danger">Doctor</span> role</p>
+        <p asp-roles="Admin">This content is only visible if you are authenticated and have the <span class="text-danger">Admon</span> role</p>
+        <p asp-roles="Admin,Doctor">This content is visible if you have the <span class="text-danger">Admin or Doctor</span> roles</p>
+
+    </div>
+</div>
+
+
