@@ -10,9 +10,6 @@ namespace Consultation.Web.ViewModels
         public int Id { get; set; }
 
         [Required]
-        public string Name { get; set; }
-
-        [Required]
         public Condition Condition { get; set; }
 
         [Required]
@@ -22,6 +19,8 @@ namespace Consultation.Web.ViewModels
         public DateTime ConfirmedOn { get; set; }
 
         public int PatientId { get; set; }
+
+        public Doctor Patient { get; set; }
 
         [Required]
         [StringLength(500)]
