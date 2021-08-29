@@ -1,60 +1,42 @@
-﻿@model IEnumerable<Consultation.Data.Models.Diagnosis>
+﻿@model IList<Diagnosis>
 
-@{
-    ViewData["Title"] = "Index";
-    Layout = "~/Views/Shared/_Layout.cshtml";
-}
+<h3>Diagnoses</h3>
 
-<h1>Index</h1>
+<div asp-roles="@Role.Doctor" class="mt-4 mb-4">
+    <!-- add an action link styled as a button to navigate to Create Action -->
+    <a asp-action="DiagnosisCreate" class="btn btn-primary btn-sm">Create Diagnosis</a>
+</div>
 
-<p>
-    <a asp-action="Create">Create New</a>
-</p>
-<table class="table">
-    <thead>
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.DiagnosedOn)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.ConfirmedOn)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Doctor)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Patient)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Description)
-            </th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.DiagnosedOn)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.ConfirmedOn)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Doctor.Mobile)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Patient.Mobile)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Description)
-            </td>
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
-            </td>
-        </tr>
-}
-    </tbody>
-</table>
+<div>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Condition</th>
+                <th>DiagnosedOn</th>
+                <th>ConfirmedOn</th>
+                <th>Doctor</th>
+                <th>Patient</th>
+                <th>Description</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.Condition</td>
+                    <td>@item.DiagnosedOn</td>
+                    <td>@item.ConfirmedOn</td>
+                    <td>@item.Doctor.User.Name</td>
+                    <td>@item.Patient.User.Name</td>
+                    <td>@item.Description</td>
+                    <td>
+                        <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                        <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                        <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+    </div>
