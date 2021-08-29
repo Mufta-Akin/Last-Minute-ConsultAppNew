@@ -14,7 +14,7 @@ namespace Consultation.Web.Controllers
     public class ConditionController : BaseController
     {
         private readonly PracticeService _svc;
-        private object conditionId;
+        //private readonly object conditionId;
 
         public ConditionController(PracticeService svc)
         {
@@ -35,13 +35,8 @@ namespace Consultation.Web.Controllers
         }
 
         // GET: Condition/Details/5
-        public IActionResult ConditionDetails(int? id)
+        public IActionResult ConditionDetails(int conditionId)
         {
-            if (id == null)
-            {
-                return NotFound();
-            }
-
             var condition = _svc.GetCondition(conditionId);
             if (condition == null)
             {
@@ -51,11 +46,13 @@ namespace Consultation.Web.Controllers
             return View(condition);
         }
 
-        private bool ConditionExists(int id)
+        private bool ConditionExists(int id, object conditionId)
         {
-            var condition = _svc.GetCondition(conditionId);            
-            return ((bool)condition);
+            var condition = _svc.GetCondition(conditionId);
+            Condition condition1 = ((Condition)condition);
             Console.WriteLine("Your Condition is " + condition);
+            return ((bool)condition);
+            
         }
     }
 }
