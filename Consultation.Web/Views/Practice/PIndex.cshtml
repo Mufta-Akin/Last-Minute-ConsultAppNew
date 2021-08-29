@@ -1,0 +1,39 @@
+@model IList<Staff>
+
+<h3>Practice Admin</h3>
+
+<div asp-roles="@Role.Staff" class="mt-4 mb-4">
+    <!-- add an action link styled as a button to navigate to Create Action -->
+    <a asp-action="PracticeCreate" class="btn btn-primary btn-sm">Create Practice Member</a>
+</div>
+
+<div>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Positio</th>
+                <th>Email</th>
+                <th>Mobile</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var adm in Model)
+            {
+            <tr>
+                <td>@adm.Id</td>
+                <td>@adm.Position</td>
+                <td>@adm.User.Email</td>
+                <td>@adm.Mobile</td>
+                <td>
+                    <a asp-controller="Practice" asp-action="PracticeDetails" asp-route-id="@adm.Id">Details</a> |
+                    <a asp-controller="Practice" asp-action="PracticeEdit" asp-route-id="@adm.Id">Edit</a> |
+                    <a asp-controller="Practice" asp-action="PracticeDelete" asp-route-id="@adm.Id">Delete</a>
+                </td>
+            </tr>
+            }
+        </tbody>
+    </table>
+
+</div>

@@ -1,0 +1,35 @@
+﻿@model Doctor
+
+    <h3 class="mt-4 mb-4">Delete Doctor</h3>
+
+    <h4 class="mb-4">Please Confirm Deletion?</h4>
+
+    <div>
+        <!-- display the doctor using a <dl> as per Details.cshtml -->
+        <div class="col card rounded shadow p-3">
+            <dl class="row">
+                <dt class="col-5">Name</dt>
+                <dd class="col-7">@Model.User.Name</dd>
+
+                <dt class="col-5">Speciality</dt>
+                <dd class="col-7">@Model.Mobile</dd>
+
+                <dt class="col-5">Email</dt>
+                <dd class="col-7">@Model.User.Email</dd>
+
+                <dt class="col-5">Mobile</dt>
+                <dd class="col-7">@Model.Mobile</dd>
+            </dl>
+        </div>
+
+        <div class="mt-4">
+
+            <form asp-controller="Practice" asp-action="DoctorDeleteConfirmed" type="post">
+                <input type="hidden" asp-for="Id" />
+                <input type="submit" value="Confirm" class="btn btn-danger" />
+                <a class="btn btn-secondary" asp-controller="Practice" asp-action="PatientIndex">Cancel</a>
+            </form>
+        </div>
+
+    </div>
+

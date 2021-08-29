@@ -1,0 +1,39 @@
+﻿@model Staff
+
+<partial name="_Breadcrumbs" model=@(new [] { ("/", "Home"), ("/staff", "Staffs"), ("","Details") })>
+
+    DeletePatientConfirmed
+
+    <!-- Description list of patient details -->
+    <dl class="row">
+        <dt class="col-sm-3">Name</dt>
+        <dd class="col-sm-9">@Model.User.Name</dd>
+
+        <dt class="col-sm-3">Position</dt>
+        <dd class="col-sm-9">@Model.Position</dd>
+
+        <dt class="col-sm-3">Email</dt>
+        <dd class="col-sm-9">@Model.User.Email</dd>
+
+        <dt class="col-sm-3">Mobile</dt>
+        <dd class="col-sm-9">@Model.Mobile</dd>
+
+    </dl>
+
+    <!-- Create a partial _Ailments and render the Patient Ailments -->
+    <partial name="_Ailments" />
+
+
+    <!-- navigation links to create an ailment or return to Index -->
+    <div class="mt-4 mb-4">
+        <!-- add navigation link to CreateAilment action, passing correct route parameter -->
+        <a asp-action="CreateAilment" asp-route-id="@Model.Id" class="btn btn-info mr-4">
+            <i class="bi bi-plus-square-dotted mr-1"></i>Add Ailment
+        </a>
+
+        <!-- add link to redirect to Index action -->
+        @*<a asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-info">Edit</a>*@
+        <a asp-action="Index" class="btn btn-sm btn-default">
+        </a>
+        <a class="btn btn-primary" asp-action="Index">Send</a>
+    </div>

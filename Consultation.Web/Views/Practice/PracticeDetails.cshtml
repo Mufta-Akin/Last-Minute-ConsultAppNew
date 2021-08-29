@@ -1,0 +1,31 @@
+﻿@model Practice
+
+
+<partial name="_Breadcrumbs" model=@(new [] { ("/", "Home"), ("/practice", "Practice"), ("","Details") })>
+
+    <h3 class="mt=4 mb-4">Practice Staff Details</h3>
+    @*<a asp-action="PracticeDetails" class="btn btn-info">Practice Staff Details</a>*@
+
+    <!-- Description list of practice staff details -->
+    <dl class="row">
+        <dt class="col-sm-3">Name</dt>
+        <dd class="col-sm-9">@Model.User.Name</dd>
+
+        <dt class="col-sm-3">Address</dt>
+        <dd class="col-sm-9">@Model.Address</dd>
+
+        <dt class="col-sm-3">Email</dt>
+        <dd class="col-sm-9">@Model.User.Email</dd>
+
+        <dt class="col-sm-3">Mobile</dt>
+        <dd class="col-sm-9">@Model.Mobile</dd>
+
+    </dl>
+
+
+    <!-- add link to redirect to Index action -->
+    <a asp-action="PracticeEdit" asp-route-id="@Model.Id" class="btn btn-info">Edit</a>
+    <a asp-action="PracticeIndex" class="btn btn-sm btn-default">
+    <a class="btn btn-info" asp-action="PracticeIndex">Back to List</a>
+    </a>
+    </div>

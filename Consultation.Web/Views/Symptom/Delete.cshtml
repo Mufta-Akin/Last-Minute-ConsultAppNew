@@ -1,0 +1,26 @@
+﻿@model Symptom
+
+<h3 class="mt-4 mb-4">Delete Symptom</h3>
+
+<h4 class="mb-4">Please Confirm Deletion?</h4>
+
+<div>
+    <!-- display the symptom using a <dl> as per Details.cshtml -->
+    <div class="col card rounded shadow pt-3">
+        <dl class="row">
+            <dt class="col-5">Name</dt>
+            <dd class="col-7">@Model.Name</dd>
+        </dl>
+    </div>
+
+    <div class="mt-4">
+
+        <form asp-action="Delete">
+            <input type="hidden" asp-for="Id" />
+            <input type="submit" value="Delete" class="btn btn-danger" /> |
+            <a asp-action="Index">Cancel</a>
+        </form>
+    </div>
+
+</div>
+

@@ -1,0 +1,39 @@
+﻿@model Diagnosis
+
+
+<h3 class="mt-4 mb-4">Delete Diagnosis</h3>
+
+<h4 class="mb-4">Please Confirm Deletion?</h4>
+
+<div>
+    <!-- display the patient using a <dl> as per Details.cshtml -->
+    <div class="col card rounded shadow p-3">
+        <dl class="row">
+            <dt class="col-5">DiagnosedOn</dt>
+            <dd class="col-7">@Model.DiagnosedOn</dd>
+
+            <dt class="col-5">ConfirmedOn</dt>
+            <dd class="col-7">@Model.ConfirmedOn</dd>
+
+            <dt class="col-5">Doctor</dt>
+            <dd class="col-7">@Model.Doctor</dd>
+
+            <dt class="col-5">Patient</dt>
+            <dd class="col-7">@Model.Patient</dd>
+
+            <dt class="col-5">Description</dt>
+            <dd class="col-7">@Model.Description</dd>
+
+        </dl>
+    </div>
+
+    <div class="mt-4">
+
+        <form asp-action="Delete">
+            <input type="hidden" asp-for="Id" />
+            <input type="submit" value="Delete" class="btn btn-danger" /> |
+            <a asp-action="Index">Back to List</a>
+        </form>
+
+    </div>
+</div>

@@ -1,0 +1,27 @@
+﻿@model Patient
+
+<partial name="_Breadcrumbs" model=@(new [] { ("/", "Home"), ("/patient", "Patients"), ("","Details") })>
+
+    <h3 class="mt-4 mb-4">Patient Details</h3>
+
+    <dl class="row">
+        <dt class="col-5">Name</dt>
+        <dd class="col-7">@Model.User.Name</dd>
+
+        <dt class="col-5">Age</dt>
+        <dd class="col-7">@Model.Dob</dd>
+
+        <dt class="col-5">Email</dt>
+        <dd class="col-7">@Model.User.Email</dd>
+
+        <dt class="col-5">Course</dt>
+        <dd class="col-7">@Model.Mobile</dd>
+
+    </dl>
+
+    <div class="mt-4 mb-4">
+        <!-- add link to redirect to Index action -->
+        <a asp-action="PatientEdit" asp-route-id="@Model.Id" class="btn btn-info">Edit</a>
+        <a asp-action="PatientIndex" class="btn btn-primary">Back to List</a>
+    </div>
+

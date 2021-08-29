@@ -1,0 +1,39 @@
+﻿@model Diagnosis
+
+
+<partial name="_Breadcrumbs" model=@(new [] { ("/", "Home"), ("/diagnoses", "Diagnoses"), ("","Details") })>
+
+    <h3 class="mt-4 mb-4">Diagnosis Details</h3>
+
+    <div class="card shadow rounded p-3">
+        <div class="row pl-3">
+            <!-- Details -->
+            <div class="col-8 pt-3">
+                <dl class="row">
+                    <dt class="col-5">Patient</dt>
+                    <dd class="col-7">@Model.Patient</dd>
+
+                    <dt class="col-5">Condition</dt>
+                    <dd class="col-7">@Model.Condition</dd>
+
+                    <dt class="col-5">DiagnosedOn</dt>
+                    <dd class="col-7">@Model.DiagnosedOn</dd>
+
+                    <dt class="col-5">ConfirmedOn</dt>
+                    <dd class="col-7">@Model.ConfirmedOn</dd>
+
+                    <dt class="col-5">Doctor</dt>
+                    <dd class="col-7">@Model.Doctor</dd>
+
+                    <dt class="col-5">Description</dt>
+                    <dd class="col-7">@Model.Description</dd>
+
+                </dl>
+            </div>
+            <div>
+                <a asp-action="Edit" asp-route-id="@Model.Id">Edit</a> |
+                <a asp-action="Index">Back to List</a>
+            </div>
+
+        </div>
+    </div>

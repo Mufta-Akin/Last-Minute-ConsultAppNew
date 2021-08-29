@@ -1,0 +1,37 @@
+@model IList<Doctor>
+
+<h3>Doctors</h3>
+
+<div asp-roles="@Role.Doctor" class="mt-4 mb-4"></div>
+
+<div>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Speciality</th>
+                <th>Email</th>
+                <th>Mobile</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var doc in Model)
+            {
+                <tr>
+                    <td>@doc.Id</td>
+                    <td>@doc.User.Name</td>
+                    <td>@doc.Speciality</td>
+                    <td>@doc.User.Email</td>
+                    <td>@doc.Mobile</td>
+                    <td>
+                        <a asp-controller="Doctor" asp-action="DoctorDetails" asp-route-id="@doc.Id">Details</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+    <a class="btn btn-secondary" asp-controller="Doctor" asp-action="DoctorIndex">Back to Index</a>
+</div>
