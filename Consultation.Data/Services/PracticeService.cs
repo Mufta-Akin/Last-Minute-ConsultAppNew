@@ -49,6 +49,11 @@ namespace Consultation.Data.Services
             return existing != null;
         }
 
+        public object GetCondition(object conditionId)
+        {
+            throw new NotImplementedException();
+        }
+
         public Symptom Addsymptom(string name)
         {
             var existing = GetSymptomByName(name);

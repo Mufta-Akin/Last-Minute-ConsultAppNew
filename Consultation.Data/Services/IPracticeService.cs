@@ -51,7 +51,6 @@ namespace Consultation.Data.Services
         bool DeleteSymptom(int id);
         Symptom UpdateSymptom(Symptom updated);
 
-
         //----------Condition Management------------------------------------
 
         Condition AddConditionSymptoms(int conditionId, IList<ConditionSymptom> symptoms);
