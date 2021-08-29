@@ -235,11 +235,6 @@ C:\Users\mufta\Desktop\WorkFolder\ConsultAppNew\Consultation.Web\obj\Debug\net5.
 C:\Users\mufta\Desktop\WorkFolder\ConsultAppNew\Consultation.Web\obj\Debug\net5.0\Razor\Views\Symptom\Details.cshtml.g.cs
 C:\Users\mufta\Desktop\WorkFolder\ConsultAppNew\Consultation.Web\obj\Debug\net5.0\Razor\Views\Symptom\Edit.cshtml.g.cs
 C:\Users\mufta\Desktop\WorkFolder\ConsultAppNew\Consultation.Web\obj\Debug\net5.0\Razor\Views\Symptom\Index.cshtml.g.cs
-C:\Users\mufta\Desktop\WorkFolder\ConsultAppNew\Consultation.Web\obj\Debug\net5.0\Razor\Views\Diagnosis\Create.cshtml.g.cs
-C:\Users\mufta\Desktop\WorkFolder\ConsultAppNew\Consultation.Web\obj\Debug\net5.0\Razor\Views\Diagnosis\Delete.cshtml.g.cs
-C:\Users\mufta\Desktop\WorkFolder\ConsultAppNew\Consultation.Web\obj\Debug\net5.0\Razor\Views\Diagnosis\Details.cshtml.g.cs
-C:\Users\mufta\Desktop\WorkFolder\ConsultAppNew\Consultation.Web\obj\Debug\net5.0\Razor\Views\Diagnosis\Edit.cshtml.g.cs
-C:\Users\mufta\Desktop\WorkFolder\ConsultAppNew\Consultation.Web\obj\Debug\net5.0\Razor\Views\Diagnosis\Index.cshtml.g.cs
 C:\Users\mufta\Desktop\WorkFolder\ConsultAppNew\Consultation.Web\obj\Debug\net5.0\Razor\Views\Ailment\Delete.cshtml.g.cs
 C:\Users\mufta\Desktop\WorkFolder\ConsultAppNew\Consultation.Web\obj\Debug\net5.0\Razor\Views\Ailment\Details.cshtml.g.cs
 C:\Users\mufta\Desktop\WorkFolder\ConsultAppNew\Consultation.Web\obj\Debug\net5.0\Razor\Views\Ailment\Edit.cshtml.g.cs
@@ -247,3 +242,4 @@ C:\Users\mufta\Desktop\WorkFolder\ConsultAppNew\Consultation.Web\obj\Debug\net5.
 C:\Users\mufta\Desktop\WorkFolder\ConsultAppNew\Consultation.Web\obj\Debug\net5.0\Razor\Views\Ailment\AilmentIndex.cshtml.g.cs
 C:\Users\mufta\Desktop\WorkFolder\ConsultAppNew\Consultation.Web\obj\Debug\net5.0\Razor\Views\Condition\ConditionDetails.cshtml.g.cs
 C:\Users\mufta\Desktop\WorkFolder\ConsultAppNew\Consultation.Web\obj\Debug\net5.0\Razor\Views\Condition\ConditionIndex.cshtml.g.cs
+C:\Users\mufta\Desktop\WorkFolder\ConsultAppNew\Consultation.Web\obj\Debug\net5.0\Razor\Views\Diagnosis\DiagnosisIndex.cshtml.g.cs
