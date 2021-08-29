@@ -14,6 +14,6 @@ namespace Consultation.Data.Models
         public Condition Condition { get; set; }
         public int SymptomId { get; set; }
         public Symptom Symptom { get; set; }
-        //public SymptomSignificance Significance { get; set; } = SymptomSignificance.Primary;
+        public SymptomSignificance Significance { get; set; } = SymptomSignificance.Primary;
     }
 }

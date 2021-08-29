@@ -18,4 +18,8 @@
     <ProjectReference Include="..\Consultation.Data\Consultation.Data.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Views\Condition\" />
+  </ItemGroup>
+
 </Project>
