@@ -156,6 +156,9 @@ C:\Users\mufta\Desktop\WorkFolder\ConsultAppNew\Consultation.Web\obj\Debug\net5.
 C:\Users\mufta\Desktop\WorkFolder\ConsultAppNew\Consultation.Web\obj\Debug\net5.0\Consultation.Web.TagHelpers.output.cache
 C:\Users\mufta\Desktop\WorkFolder\ConsultAppNew\Consultation.Web\obj\Debug\net5.0\Consultation.Web.RazorCoreGenerate.cache
 C:\Users\mufta\Desktop\WorkFolder\ConsultAppNew\Consultation.Web\obj\Debug\net5.0\Razor\Pages\_ValidationScriptsPartial.cshtml.g.cs
+C:\Users\mufta\Desktop\WorkFolder\ConsultAppNew\Consultation.Web\obj\Debug\net5.0\Razor\Views\Ailment\AilmentDelete.cshtml.g.cs
+C:\Users\mufta\Desktop\WorkFolder\ConsultAppNew\Consultation.Web\obj\Debug\net5.0\Razor\Views\Ailment\AilmentDetails.cshtml.g.cs
+C:\Users\mufta\Desktop\WorkFolder\ConsultAppNew\Consultation.Web\obj\Debug\net5.0\Razor\Views\Ailment\AilmentEdit.cshtml.g.cs
 C:\Users\mufta\Desktop\WorkFolder\ConsultAppNew\Consultation.Web\obj\Debug\net5.0\Razor\Views\Ailment\AilmentIndex.cshtml.g.cs
 C:\Users\mufta\Desktop\WorkFolder\ConsultAppNew\Consultation.Web\obj\Debug\net5.0\Razor\Views\Condition\ConditionDetails.cshtml.g.cs
 C:\Users\mufta\Desktop\WorkFolder\ConsultAppNew\Consultation.Web\obj\Debug\net5.0\Razor\Views\Condition\ConditionIndex.cshtml.g.cs
@@ -239,6 +242,3 @@ C:\Users\mufta\Desktop\WorkFolder\ConsultAppNew\Consultation.Web\obj\Debug\net5.
 C:\Users\mufta\Desktop\WorkFolder\ConsultAppNew\Consultation.Web\obj\Debug\net5.0\ref\Consultation.Web.dll
 C:\Users\mufta\Desktop\WorkFolder\ConsultAppNew\Consultation.Web\obj\Debug\net5.0\Consultation.Web.pdb
 C:\Users\mufta\Desktop\WorkFolder\ConsultAppNew\Consultation.Web\obj\Debug\net5.0\Consultation.Web.genruntimeconfig.cache
-C:\Users\mufta\Desktop\WorkFolder\ConsultAppNew\Consultation.Web\obj\Debug\net5.0\Razor\Views\Ailment\AilmentDelete.cshtml.g.cs
-C:\Users\mufta\Desktop\WorkFolder\ConsultAppNew\Consultation.Web\obj\Debug\net5.0\Razor\Views\Ailment\AilmentDetails.cshtml.g.cs
-C:\Users\mufta\Desktop\WorkFolder\ConsultAppNew\Consultation.Web\obj\Debug\net5.0\Razor\Views\Ailment\AilmentEdit.cshtml.g.cs

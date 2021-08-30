@@ -29,9 +29,9 @@
                     <td>@doc.User.Email</td>
                     <td>@doc.Mobile</td>
                     <td>
-                        <a asp-controller="Practice" asp-action="DoctorDetails" asp-route-id="@doc.Id">Details</a> |
-                        <a asp-controller="Practice" asp-action="DoctorEdit" asp-route-id="@doc.Id">Edit</a> |
-                        <a asp-controller="Practice" asp-action="DoctorDelete" asp-route-id="@doc.Id">Delete</a>
+                        <a asp-controller="Practice" asp-action="DoctorDetails" asp-route-id="@doc.Id" class="btn btn-info">Details</a> |
+                        <a asp-controller="Practice" asp-action="DoctorEdit" asp-route-id="@doc.Id" class="btn btn-primary">Edit</a> |
+                        <a asp-controller="Practice" asp-action="DoctorDelete" asp-route-id="@doc.Id" class="btn btn-danger">Delete</a>
                     </td>
                 </tr>
             }

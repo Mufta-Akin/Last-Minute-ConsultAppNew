@@ -27,5 +27,6 @@ namespace Consultation.Data.Models
         [StringLength(500, MinimumLength = 5)]
         public string Description { get; set; }
         public IList<Symptom> Symptoms { get; internal set; }
+       
     }
 }
