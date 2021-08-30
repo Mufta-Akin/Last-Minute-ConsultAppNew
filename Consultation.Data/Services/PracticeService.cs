@@ -517,7 +517,7 @@ namespace Consultation.Data.Services
             return results;
         }
 
-        // -----------Diagnosis Related----------------------------
+        // -----------Diagnosis Related---------------------------
         public IList<Diagnosis> GetDiagnoses(IList<ConditionSymptom> conditionSymptoms)
         {
             return ctx.Diagnoses.Include(patient => patient.Id).ToList();

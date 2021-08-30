@@ -1,0 +1,37 @@
+﻿@model Ailment
+
+@*<h3 class="mt-4 mb-4">Ailment Details</h3>*@
+
+<div class="mt-4 mb-4">
+    <a class="btn btn-info mr-4">
+        <i class="bi bi mr-1"></i>Ailment and Condition Details</a>
+</div>
+
+
+<div class="card shadow rounded p-3">
+    <div class="row pl-3">
+        <!-- Details -->
+        <div class="col-8 pt-3">
+            <dl class="row">
+                <dt class="col-5">Issue</dt>
+                <dd class="col-7">@Model.Issue</dd>
+
+                <dt class="col-5">Symptoms</dt>
+                <dd class="col-7">@Model.Symptoms</dd>
+
+                <dt class="col-5">Condition Results</dt>
+                <dd class="col-7">@Model.</dd>
+
+                <dt class="col-5">CreatedOn</dt>
+                <dd class="col-7">@Model.CreatedOn</dd>
+
+                <dt class="col-5">Active</dt>
+                <dd class="col-7">@Model.Active</dd>
+
+            </dl>
+        </div>
+    </div>
+</div>
+<div>
+    <a asp-controller="Patient" class="btn btn-primary" asp-action="PatientDetails">Back to List</a>
+</div>

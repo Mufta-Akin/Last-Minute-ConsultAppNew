@@ -136,8 +136,7 @@ namespace Consultation.Web.Controllers
 
 
         // GET: Patients/condition details
-        [Authorize]
-        public IActionResult PatientConditionDetails(ConditionViewModel condition)
+        public IActionResult PatientConditionDetails(ConditionViewModel conditionViewModel)
         {
             // obtain id from currently logged in user (patient)
             var id = GetSignedInUserId(); // method in base controller
@@ -149,9 +148,23 @@ namespace Consultation.Web.Controllers
                 Alert("Patient Not Found", AlertType.warning);
                 return RedirectToAction(nameof(PatientIndex));
             }
-            var conditionDetails = _svc.GetDiagnoses(condition.ConditionSymptoms);
+
+
+            var conditionDetails = _svc.GetDiagnoses(conditionViewModel.ConditionSymptoms);
 
             return View(conditionDetails);
+        }
+
+        // GET: Condition/Details/5.
+        public IActionResult ConditionDetails(int conditionId)
+        {
+            var condition = _svc.GetCondition(conditionId);
+            if (condition == null)
+            {
+                return NotFound();
+            }
+
+            return View(condition);
         }
 
 
