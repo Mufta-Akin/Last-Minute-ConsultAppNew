@@ -22,7 +22,7 @@
                 <span asp-condition=@(!a.Active)>No</span>
             </td>
             <td>
-                <a asp-controller="ailment" asp-action="AilmentDetails" asp-route-id="@a.Id" class="btn btn-danger">Ailment Details</a>
+                <a asp-controller="Ailment" asp-action="Details" asp-route-id="@a.Id" class="btn btn-danger">Ailment Details</a>
             </td>
         </tr>   
         }

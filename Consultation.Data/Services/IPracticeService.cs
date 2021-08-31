@@ -82,7 +82,10 @@ namespace Consultation.Data.Services
         Staff AddStaff(string name, string position, string email, string password, string mobile);
 
         //----------Diagnosis Management-----------------------
+        Diagnosis AddDiagnosis(int patientId);
+        Diagnosis GetDiagnosisById(int diagnosisId);
         public IList<Diagnosis> GetDiagnoses(IList<ConditionSymptom> conditionSymptoms);
-        Diagnosis GetDiagnosisById(int DiagnosisId);
+
+
     }
 }

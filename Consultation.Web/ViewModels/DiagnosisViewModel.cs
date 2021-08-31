@@ -25,6 +25,7 @@ namespace Consultation.Web.ViewModels
         [Required]
         [StringLength(500)]
         public string Description { get; set; }
+
     }
 
 }

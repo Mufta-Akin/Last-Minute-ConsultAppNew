@@ -22,21 +22,16 @@ namespace Consultation.Web.Controllers
             _svc = svc;
         }
 
-        public IActionResult Index()
-        {
-            // dashboard for Ailment   
-            return View();
-        }
-
+ 
         // GET: /ailment/AilmentIndex
-        public IActionResult AilmentIndex()
+        public IActionResult Index()
         {
             // display blank form to create a doctor
             var ailments = _svc.GetAllAilments();
             return View(ailments);
         }
 
-        public IActionResult AilmentDetails(int id)
+        public IActionResult Details(int id)
         {
             // retrieve the symptom with specified id from the service
             var ailment = _svc.GetAilment(id);
@@ -45,11 +40,25 @@ namespace Consultation.Web.Controllers
                 Alert("Ailment Not Found", AlertType.warning);
                 return RedirectToAction(nameof(Index));
             }
-            return View(ailment);
+           
+            var vm = new AilmentConditionViewModel {
+                Id = ailment.Id,
+                Issue = ailment.Issue,
+                Resolution = ailment.Resolution,
+                CreatedOn = ailment.CreatedOn,
+                ResolvedOn= ailment.ResolvedOn,
+                Active = ailment.Active,
+                PatientId = ailment.PatientId,
+                PatientName = ailment.Patient.User.Name,
+                Symptoms = ailment.Symptoms,
+                PossibleConditions = _svc.DiagnoseConditions(ailment)
+            };
+
+            return View(vm);
         }
      
          // GET /patient/createailment
-        public IActionResult CreateAilment(int id)
+        public IActionResult Create(int id)
         {
             var pat = _svc.GetPatientById(id);
             // check the returned patient is not null and if so alert
@@ -65,20 +74,21 @@ namespace Consultation.Web.Controllers
                 Symptoms = new MultiSelectList(_svc.GetSymptoms(), "Id", "Name")
             };
 
-            return View("CreateAilment", ailment);
+            return View("Create", ailment);
         }
+       
 
         // POST /patient/createailment
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public IActionResult CreateAilment(AilmentViewModel m)
+        public IActionResult Create(AilmentViewModel m)
         {
             var pat = _svc.GetPatientById(m.PatientId);
             // check the returned patient is not null and if so return NotFound()
             if (pat == null)
             {
                 Alert($"No such patient {m.PatientId}", AlertType.warning);
-                return RedirectToAction(nameof(AilmentIndex));
+                return RedirectToAction(nameof(Index));
             }
 
             // create the ailment view model and populate the PatientId property
@@ -88,10 +98,12 @@ namespace Consultation.Web.Controllers
 
             Alert($"Ailment created successfully", AlertType.success);
 
-            return RedirectToAction("PatientDetails", new { Id = m.PatientId });
+            return RedirectToAction("Details", "Patient", new { Id = m.PatientId });
         }
 
-        public IActionResult AilmentEdit(int id)
+        
+
+        public IActionResult Edit(int id)
         {
             var pat = _svc.GetPatientById(id);
             // check the returned patient is not null and if so alert
@@ -107,20 +119,20 @@ namespace Consultation.Web.Controllers
                 Symptoms = new MultiSelectList(_svc.GetSymptoms(), "Id", "Name")
             };
 
-            return View("CreateAilment", ailment);
+            return View("Edit", ailment);
         }
 
         // POST /patient/createailment
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public IActionResult AilmentEdit(AilmentViewModel m)
+        public IActionResult Edit(AilmentViewModel m)
         {
             var pat = _svc.GetPatientById(m.PatientId);
             // check the returned patient is not null and if so return NotFound()
             if (pat == null)
             {
                 Alert($"No such patient {m.PatientId}", AlertType.warning);
-                return RedirectToAction(nameof(AilmentIndex));
+                return RedirectToAction(nameof(Index));
             }
 
             // create the ailment view model and populate the PatientId property
@@ -130,7 +142,7 @@ namespace Consultation.Web.Controllers
 
             Alert($"Ailment edited successfully", AlertType.success);
 
-            return RedirectToAction("PatientDetails", new { Id = m.PatientId });
+            return RedirectToAction("Details", "Patient", new { Id = m.PatientId });
         }
 
         // GET: Ailment/Delete
@@ -142,7 +154,7 @@ namespace Consultation.Web.Controllers
             if (ailment == null)
             {
                 Alert("Symptom Not Found", AlertType.warning);
-                return RedirectToAction(nameof(AilmentIndex));
+                return RedirectToAction(nameof(Index));
             }
 
             // pass symptom to view for deletion confirmation
@@ -155,11 +167,11 @@ namespace Consultation.Web.Controllers
         public IActionResult DeleteConfirmed(int id)
         {
             // delete symptom via service
-            _svc.DeleteSymptom(id);
+            _svc.DeleteAilment(id);
 
             Alert($"Symptom {id} deleted successfully", AlertType.success);
             // redirect to the index view
-            return RedirectToAction(nameof(AilmentIndex));
+            return RedirectToAction(nameof(Index));
         }
 
     }

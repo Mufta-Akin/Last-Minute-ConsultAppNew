@@ -1,0 +1,19 @@
+@model IList<AilmentSymptom>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Severity</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var s in Model)
+        {
+            <tr>
+                <td>@s.Symptom.Name</td>                    
+                <td>@s.Significance</td>
+            </tr>
+        }
+    </tbody>
+</table>

@@ -364,7 +364,10 @@ namespace Consultation.Data.Services
         public Ailment GetAilment(int id)
         {
             return ctx.Ailments
-                      .Include(a => a.Patient)
+                      .Include(a => a.Patient)   
+                      .ThenInclude(p => p.User)                   
+                      .Include(sa => sa.Symptoms)
+                      .ThenInclude(s => s.Symptom)                     
                       .FirstOrDefault(a => a.Id == id);
         }
 
@@ -510,17 +513,25 @@ namespace Consultation.Data.Services
 
             // uses containslist extension method found in Extensions/ListExtensions.cs
             // create a list of condition symptom id's
-            var results = conditions.Where(c => c.ConditionSymptoms.Select(cs => cs.SymptomId)   
-                          .ContainsList(ailmentSymptoms)) // then check if this contains the list of ailment id's
+           
+            var results = conditions
+                          .Where(
+                              c => {
+                                  var cs =  c.ConditionSymptoms.Select(cs => cs.SymptomId).ToList();
+                                  var r = cs.ContainsList(ailmentSymptoms);
+                                  return r;
+                                }
+                          ) // then check if this contains the list of ailment id's
                           .ToList();
 
             return results;
         }
 
+
         // -----------Diagnosis Related---------------------------
-        public IList<Diagnosis> GetDiagnoses(IList<ConditionSymptom> conditionSymptoms)
+        public Diagnosis AddDiagnosis(int patientId)
         {
-            return ctx.Diagnoses.Include(patient => patient.Id).ToList();
+            throw new NotImplementedException();
         }
 
         public Diagnosis GetDiagnosisById(int DiagnosisId)
@@ -529,6 +540,12 @@ namespace Consultation.Data.Services
                      .Include(patient => patient.Id)
                      .FirstOrDefault(diagnosis => diagnosis.Id == DiagnosisId);
         }
+
+        public IList<Diagnosis> GetDiagnoses(IList<ConditionSymptom> conditionSymptoms)
+        {
+            return ctx.Diagnoses.Include(patient => patient.Id).ToList();
+        }
+
 
 
         //-------------------------Doctor Related-----------------------------

@@ -89,6 +89,17 @@ namespace Consultation.Data.Services
             var sym39 = _svc.Addsymptom("Diarrhea");
             var sym40 = _svc.Addsymptom("Nausea");
 
+            var con1 = _svc.AddCondition("Flu","Influenza");
+            _svc.AddConditionSymptoms(con1.Id, new List<ConditionSymptom> {
+                    new ConditionSymptom { Condition = con1, Symptom = sym17 },
+                    new ConditionSymptom { Condition = con1, Symptom = sym1 },                    
+             });
+
+            var con2 = _svc.AddCondition("Whooping Cough","Whooping Cough");
+            _svc.AddConditionSymptoms(con2.Id, new List<ConditionSymptom> {
+                    new ConditionSymptom { Condition = con2, Symptom = sym1 },
+                    new ConditionSymptom { Condition = con2, Symptom = sym15 },                    
+             });
 
         }
     }

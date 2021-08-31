@@ -1,0 +1,25 @@
+﻿@model ConditionViewModel
+
+Patient Condition
+
+    <!-- Description list of patient condition details -->
+<dl class="row">
+    <dt class="col-sm-3">Name</dt>
+    <dd class="col-sm-9">@Model.Name</dd>
+
+    <dt class="col-sm-3">Condition</dt>
+    <dd class="col-sm-9">@Model.Condition</dd>
+
+    <dt class="col-sm-3">Date</dt>
+    <dd class="col-sm-9">@Model.DiagnosedDate</dd>
+
+    <dt class="col-sm-3">Symptoms</dt>
+    <dd class="col-sm-9">@Model.ConditionSymptoms</dd>
+
+</dl>
+
+    <div class="mt-4 mb-4">
+        <!-- add link to redirect to Index action -->
+        <a asp-action="PatientIndex" class="btn btn-default"></a>
+        <a class="btn btn-primary" asp-action="PatientIndex">Close</a>
+    </div>
