@@ -22,12 +22,15 @@
             <textarea rows="5" asp-for="Issue" class="form-control"></textarea>
             <span asp-validation-for="Issue" class="text-danger"></span>
         </div>
-                
+
+
+        
 
         <!-- multiselect list of symptoms displayed and selected symptom ids are added to the SelectedSymptomIds list -->
         <div class="form-group mt-3">
-            <p class="text-warning bg-dark">Ctrl+Select all primary symptoms</p>
-            <select asp-for="SelectedSymptomIds" class="form-control" asp-items="@Model.Symptoms" multiple="multiple" size="22">
+            <p class="text-warning bg-dark">Ctrl+Select all the symptoms that apply</p>
+            @*<label asp-for="SelectedSymptomIds" class="control-label"></label>*@
+            <select asp-for="SelectedSymptomIds" class="form-control" asp-items="@Model.Symptoms" multiple="multiple" size="20">
             </select>
         </div>
 
