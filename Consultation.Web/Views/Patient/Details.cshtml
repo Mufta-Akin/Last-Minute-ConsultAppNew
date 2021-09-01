@@ -1,35 +1,37 @@
 ﻿@model Patient
 
-<h3 class="mt-4 mb-4">Patient Details</h3>
 
-        <!-- Description list of patient details -->
-        <dl class="row">
-            <dt class="col-sm-3">Name</dt>
-            <dd class="col-sm-9">@Model.User.Name</dd>
+    <h3 class="mt-4 mb-4">Patient Details</h3>
 
-            <dt class="col-sm-3">Age</dt>
-            <dd class="col-sm-9">@Model.Dob</dd>
+    <!-- Description list of patient details -->
+    <dl class="row">
+        <dt class="col-sm-3">Name</dt>
+        <dd class="col-sm-9">@Model.User.Name</dd>
 
-            <dt class="col-sm-3">Email</dt>
-            <dd class="col-sm-9">@Model.User.Email</dd>
+        <dt class="col-sm-3">Age</dt>
+        <dd class="col-sm-9">@Model.Dob</dd>
 
-            <dt class="col-sm-3">Mobile</dt>
-            <dd class="col-sm-9">@Model.Mobile</dd>
+        <dt class="col-sm-3">Email</dt>
+        <dd class="col-sm-9">@Model.User.Email</dd>
 
-        </dl>
+        <dt class="col-sm-3">Mobile</dt>
+        <dd class="col-sm-9">@Model.Mobile</dd>
 
-        <!-- Create a partial _Ailments and render the Patient Ailments -->
-        <partial name="_Ailments" />
+    </dl>
+
+    <!-- Create a partial _Ailments and render the Patient Ailments -->
+    <partial name="_Ailments" />
 
 
-        <!-- navigation links to create an ailment or return to Index -->
-        <div class="mt-4 mb-4">
-            <!-- add navigation link to CreateAilment action, passing correct route parameter -->
-            <a asp-controller="Ailment" asp-action="Create" asp-route-id="@Model.Id" class="btn btn-info mr-4">
-                <i class="bi bi-plus-square-dotted mr-1"></i>Add Ailment
-            </a>
+    <!-- navigation links to create an ailment or return to Index -->
+    <div class="mt-4 mb-4">
+        <!-- add navigation link to CreateAilment action, passing correct route parameter -->
+        <a asp-controller="Ailment" asp-action="Create" asp-route-id="@Model.Id" class="btn btn-info mr-4">
+            <i class="bi bi-plus-square-dotted mr-1"></i>Add Ailment
+        </a>
+        <a asp-controller="Ailment" asp-action="Details" asp-route-id="@Model.Id" class="btn btn-danger">Ailment Details</a>
 
-            <!-- add link to redirect to Index action -->
-            <a asp-action="Index" class="btn btn-default"></a>
-     
-        </div>
+        <!-- add link to redirect to Index action -->
+        <a asp-action="Index" class="btn btn-default"></a>
+
+    </div>

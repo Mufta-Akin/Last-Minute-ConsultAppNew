@@ -1,37 +1,33 @@
 ﻿@model AilmentConditionViewModel
-
 @*<h3 class="mt-4 mb-4">Ailment Details</h3>*@
 
 <div class="mt-4 mb-4">
     <a class="btn btn-info mr-4">
-        <i class="bi bi mr-1"></i>Ailment and Condition Details</a>
+        <i class="bi bi mr-1"></i>Ailment and Condition Details
+    </a>
 </div>
 
 
 <div class="card shadow rounded p-3">
     <div class="row">
-         <dl class="row">
-                <dt class="col-5">Patient</dt>
-                <dd class="col-7">@Model.PatientName</dd>        
-            </dl
-    </div>
-    <div class="row pl-3">
-        <!-- Details -->
-        <div class="col-8 pt-3">
-            <dl class="row">
-                <dt class="col-5">Issue</dt>
-                <dd class="col-7">@Model.Issue</dd>
-                
-                <dt class="col-5">Condition Results</dt>
-                <dd class="col-7">@Model.Resolution</dd>
 
-                <dt class="col-5">CreatedOn</dt>
-                <dd class="col-7">@Model.CreatedOn</dd>
+        <div class="row pl-3">
+            <!-- Details -->
+            <div class="col-8 pt-3">
+                <dl class="row">
+                    <dt class="col-5">Patient Name</dt>
+                    <dd class="col-7">@Model.PatientName</dd>
+                    <dt class="col-5">Issue</dt>
+                    <dd class="col-7">@Model.Issue</dd>
 
-                <dt class="col-5">Active</dt>
-                <dd class="col-7">@Model.Active</dd>
+                    <dt class="col-5">CreatedOn</dt>
+                    <dd class="col-7">@Model.CreatedOn</dd>
 
-            </dl>
+                    <dt class="col-5">Active</dt>
+                    <dd class="col-7">@Model.Active</dd>
+
+                </dl>
+            </div>
         </div>
     </div>
 
@@ -39,7 +35,7 @@
     <partial model=@Model.Symptoms name="_Symptoms" />
 
     <h4>Possible Conditions</h4>
-    @foreach(var c in Model.PossibleConditions)
+    @foreach (var c in Model.PossibleConditions)
     {
         <p>@c.Description</p>
     }

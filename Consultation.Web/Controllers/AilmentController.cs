@@ -93,7 +93,17 @@ namespace Consultation.Web.Controllers
 
             // create the ailment view model and populate the PatientId property
             var ailment = _svc.AddAilment(m.PatientId, m.Issue);
+            if (ailment == null)
+            {
+                Alert($"You must add an ailment", AlertType.warning);
+                return RedirectToAction(nameof(Index));
+            }
             var ailmentSymptoms = m.SelectedSymptomIds.Select(i => new AilmentSymptom { AilmentId = ailment.Id, SymptomId = i }).ToList();
+            if (ailmentSymptoms == null)
+            {
+                Alert($"Please select ailment symptoms", AlertType.warning);
+                return RedirectToAction(nameof(Index));
+            }
             _svc.AddAilmentSymptoms(ailment.Id, ailmentSymptoms);
 
             Alert($"Ailment created successfully", AlertType.success);
