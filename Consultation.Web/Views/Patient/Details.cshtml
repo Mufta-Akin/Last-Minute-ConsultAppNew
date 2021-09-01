@@ -26,10 +26,10 @@
     <!-- navigation links to create an ailment or return to Index -->
     <div class="mt-4 mb-4">
         <!-- add navigation link to CreateAilment action, passing correct route parameter -->
-        <a asp-controller="Ailment" asp-action="Create" asp-route-id="@Model.Id" class="btn btn-info mr-4">
+        <a asp-controller="Ailment" asp-action="Create" asp-route-id="@Model.Id" class="btn btn-info mr-1 mr-4">
             <i class="bi bi-plus-square-dotted mr-1"></i>Add Ailment
         </a>
-        <a asp-controller="Ailment" asp-action="Details" asp-route-id="@Model.Id" class="btn btn-danger">Ailment Details</a>
+        
 
         <!-- add link to redirect to Index action -->
         <a asp-action="Index" class="btn btn-default"></a>
