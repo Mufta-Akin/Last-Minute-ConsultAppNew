@@ -20,7 +20,7 @@ namespace Consultation.Data.Services
         Practice GetPracticeByUserId(int userId);
         Practice AddPractice(string name, string address, string email, string password, string mobile);
 
-        //-------------------Patients Management--------------------
+        ////-------------------Patients Management--------------------
         IList<Patient> GetPatients();
         Patient GetPatientById(int patientId);
         Patient CreatePatient(string name, string address, string email, string password, string mobile, DateTime dob);

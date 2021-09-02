@@ -23,7 +23,7 @@ namespace Consultation.Web.Controllers
         }
 
  
-        // GET: /ailment/AilmentIndex
+        // GET: /ailment/Index
         public IActionResult Index()
         {
             // display blank form to create a doctor

@@ -1,12 +1,12 @@
-C:\Users\mufta\Desktop\WorkFolder\ConsultAppNew\Consultation.Data\bin\Debug\net5.0\Consultation.Data.deps.json
-C:\Users\mufta\Desktop\WorkFolder\ConsultAppNew\Consultation.Data\bin\Debug\net5.0\Consultation.Data.dll
-C:\Users\mufta\Desktop\WorkFolder\ConsultAppNew\Consultation.Data\bin\Debug\net5.0\ref\Consultation.Data.dll
-C:\Users\mufta\Desktop\WorkFolder\ConsultAppNew\Consultation.Data\bin\Debug\net5.0\Consultation.Data.pdb
-C:\Users\mufta\Desktop\WorkFolder\ConsultAppNew\Consultation.Data\obj\Debug\net5.0\Consultation.Data.csprojAssemblyReference.cache
-C:\Users\mufta\Desktop\WorkFolder\ConsultAppNew\Consultation.Data\obj\Debug\net5.0\Consultation.Data.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\mufta\Desktop\WorkFolder\ConsultAppNew\Consultation.Data\obj\Debug\net5.0\Consultation.Data.AssemblyInfoInputs.cache
-C:\Users\mufta\Desktop\WorkFolder\ConsultAppNew\Consultation.Data\obj\Debug\net5.0\Consultation.Data.AssemblyInfo.cs
-C:\Users\mufta\Desktop\WorkFolder\ConsultAppNew\Consultation.Data\obj\Debug\net5.0\Consultation.Data.csproj.CoreCompileInputs.cache
-C:\Users\mufta\Desktop\WorkFolder\ConsultAppNew\Consultation.Data\obj\Debug\net5.0\Consultation.Data.dll
-C:\Users\mufta\Desktop\WorkFolder\ConsultAppNew\Consultation.Data\obj\Debug\net5.0\ref\Consultation.Data.dll
-C:\Users\mufta\Desktop\WorkFolder\ConsultAppNew\Consultation.Data\obj\Debug\net5.0\Consultation.Data.pdb
+C:\Users\mufta\OneDrive\AA Consultation base\All Base\Consultation-baseF-09-Copy\Consultation.Data\bin\Debug\net5.0\Consultation.Data.deps.json
+C:\Users\mufta\OneDrive\AA Consultation base\All Base\Consultation-baseF-09-Copy\Consultation.Data\bin\Debug\net5.0\Consultation.Data.dll
+C:\Users\mufta\OneDrive\AA Consultation base\All Base\Consultation-baseF-09-Copy\Consultation.Data\bin\Debug\net5.0\ref\Consultation.Data.dll
+C:\Users\mufta\OneDrive\AA Consultation base\All Base\Consultation-baseF-09-Copy\Consultation.Data\bin\Debug\net5.0\Consultation.Data.pdb
+C:\Users\mufta\OneDrive\AA Consultation base\All Base\Consultation-baseF-09-Copy\Consultation.Data\obj\Debug\net5.0\Consultation.Data.csprojAssemblyReference.cache
+C:\Users\mufta\OneDrive\AA Consultation base\All Base\Consultation-baseF-09-Copy\Consultation.Data\obj\Debug\net5.0\Consultation.Data.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\mufta\OneDrive\AA Consultation base\All Base\Consultation-baseF-09-Copy\Consultation.Data\obj\Debug\net5.0\Consultation.Data.AssemblyInfoInputs.cache
+C:\Users\mufta\OneDrive\AA Consultation base\All Base\Consultation-baseF-09-Copy\Consultation.Data\obj\Debug\net5.0\Consultation.Data.AssemblyInfo.cs
+C:\Users\mufta\OneDrive\AA Consultation base\All Base\Consultation-baseF-09-Copy\Consultation.Data\obj\Debug\net5.0\Consultation.Data.csproj.CoreCompileInputs.cache
+C:\Users\mufta\OneDrive\AA Consultation base\All Base\Consultation-baseF-09-Copy\Consultation.Data\obj\Debug\net5.0\Consultation.Data.dll
+C:\Users\mufta\OneDrive\AA Consultation base\All Base\Consultation-baseF-09-Copy\Consultation.Data\obj\Debug\net5.0\ref\Consultation.Data.dll
+C:\Users\mufta\OneDrive\AA Consultation base\All Base\Consultation-baseF-09-Copy\Consultation.Data\obj\Debug\net5.0\Consultation.Data.pdb
