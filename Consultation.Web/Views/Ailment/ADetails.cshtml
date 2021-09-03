@@ -14,8 +14,11 @@
         <!-- Details -->
         <div class="col-8 pt-3">
             <dl class="row">
-                <dt class="col-5">Patient</dt>
+                <dt class="col-5">Patient Name</dt>
                 <dd class="col-7">@Model.PatientName</dd>
+
+                <dt class="col-5">Patient Mobile</dt>
+                <dd class="col-7">@Model.PatientMobile</dd>
 
                 <dt class="col-5">Issue</dt>
                 <dd class="col-7">@Model.Issue</dd>
@@ -39,6 +42,12 @@
         <p>@c.Description</p>
     }
 </div>
+
+@*<a asp-controller="Ailment" asp-action="Create" asp-route-id="@Model.Id" class="btn btn-info mr-4">
+    <i class="bi bi-plus-square-dotted mr-1"></i>Add Ailment
+</a>*@
+
 <div class="mt-2">
+   <a asp-controller="doctor" asp-action="PhonePatient" class="btn btn-info mr-4"> <i class="bi bi-telephone"></i>>Phone Patient</a>
     <a asp-controller="doctor" class="btn btn-primary" asp-action="AilmentIndex">Back to Ailment Details</a>
 </div>

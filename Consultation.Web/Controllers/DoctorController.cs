@@ -42,6 +42,7 @@ namespace Consultation.Web.Controllers
                 Active = ailment.Active,
                 PatientId = ailment.PatientId,
                 PatientName = ailment.Patient.User.Name,
+                PatientMobile = ailment.Patient.Mobile,
                 Symptoms = ailment.Symptoms,
                 PossibleConditions = _svc.DiagnoseConditions(ailment)
             };

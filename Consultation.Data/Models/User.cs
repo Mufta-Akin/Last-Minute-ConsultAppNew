@@ -13,6 +13,6 @@ namespace Consultation.Data.Models
 
         // User role within application
         public Role Role { get; set; }
-
+        public string Phone { get; set; }
     }
 }

@@ -20,7 +20,7 @@ namespace Consultation.Web.ViewModels
         // Foreign key relating to Patient with the ailment
         public int PatientId { get; set; }
         public string PatientName { get; set; }
-
+        public string PatientMobile { get; set; }
         public IList<AilmentSymptom> Symptoms { get; set; }
       
         public IList<Condition> PossibleConditions { get; set; } = new List<Condition>();
