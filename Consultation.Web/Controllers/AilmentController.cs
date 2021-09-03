@@ -56,8 +56,36 @@ namespace Consultation.Web.Controllers
 
             return View(vm);
         }
-     
-         // GET /patient/createailment
+
+        public IActionResult ADetails(int id)
+        {
+            // retrieve the symptom with specified id from the service
+            var ailment = _svc.GetAilment(id);
+            if (ailment == null)
+            {
+                Alert("Ailment Not Found", AlertType.warning);
+                return RedirectToAction(nameof(Index));
+            }
+
+            var vm = new AilmentConditionViewModel
+            {
+                Id = ailment.Id,
+                Issue = ailment.Issue,
+                Resolution = ailment.Resolution,
+                CreatedOn = ailment.CreatedOn,
+                ResolvedOn = ailment.ResolvedOn,
+                Active = ailment.Active,
+                PatientId = ailment.PatientId,
+                PatientName = ailment.Patient.User.Name,
+                Symptoms = ailment.Symptoms,
+                PossibleConditions = _svc.DiagnoseConditions(ailment)
+            };
+
+            return View(vm);
+        }
+
+
+        // GET /patient/createailment
         public IActionResult Create(int id)
         {
             var pat = _svc.GetPatientById(id);

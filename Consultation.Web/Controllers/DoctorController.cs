@@ -13,6 +13,44 @@ namespace Consultation.Web.Controllers
         {
             _svc = svc;
         }
+        //-----------Ailment managemant--------------
+        // GET: /ailment/Index--------------There is no need for this
+        public IActionResult AilmentIndex()
+        {
+            // display blank form to create a doctor
+            var ailments = _svc.GetAllAilments();
+            return View(ailments);
+        }
+
+        public IActionResult AilmentDetails(int id)
+        {
+            // retrieve the symptom with specified id from the service
+            var ailment = _svc.GetAilment(id);
+            if (ailment == null)
+            {
+                Alert("Ailment Not Found", AlertType.warning);
+                return RedirectToAction(nameof(AilmentIndex));
+            }
+
+            var vm = new AilmentConditionViewModel
+            {
+                Id = ailment.Id,
+                Issue = ailment.Issue,
+                Resolution = ailment.Resolution,
+                CreatedOn = ailment.CreatedOn,
+                ResolvedOn = ailment.ResolvedOn,
+                Active = ailment.Active,
+                PatientId = ailment.PatientId,
+                PatientName = ailment.Patient.User.Name,
+                Symptoms = ailment.Symptoms,
+                PossibleConditions = _svc.DiagnoseConditions(ailment)
+            };
+
+            return View(vm);
+        }
+
+
+        //-----------Doctor managemant---------------
 
         // GET: /doctor/dindex
         public IActionResult DIndex()
