@@ -30,9 +30,6 @@ namespace Consultation.Data.Services
             var pat2 = _svc.CreatePatient("Marty Bluffy", "7 Gainsville Avenue, Senate House", "pat2@mail.com", "password", "+241 2467326493", new DateTime(1945,4,11));
             var pat3 = _svc.CreatePatient("Gracie Tempper", "900 Briton Lane, Birminghan", "pat3@gomail.eu", "password", "+44 4905342773", new DateTime(1972,1,1));
             var pat4 = _svc.CreatePatient("Drew Horne", "Westin House, apt 23, Luton", "pat4@mail.uk", "password", "+44 3425239403", new DateTime(1991,1,1));
-            var pat5 = _svc.CreatePatient("Kong Leonne", "Unit 7 Ash Road Apartment, Derry", "pat5@mail.com", "password", "+23 8063788273", new DateTime(2010,1,1));
-            var pat6 = _svc.CreatePatient("Henrt Claimmer", "8804 Flaneggan Road, apt 2, London", "pat6@mail.net", "password", "03564495748", new DateTime(1964,1,1));
-            var pat7 = _svc.CreatePatient("Daniel Leopez", "Central Parkway, Apt 80, Oxford", "pat8@mail.com", "password", "06375465577", new DateTime(1983,1,1));
 
             // add doctors
             var doc = _svc.AddDoctor("Dr Peggy Smitler", Speciality.Cardiology, "doc@mail.com", "password", "+24364589034");
@@ -72,13 +69,49 @@ namespace Consultation.Data.Services
             var sym30 = _svc.Addsymptom("Upset stomach");
             var sym31 = _svc.Addsymptom("Straining to wee");
 
-            var issue1 = _svc.AddAilment(pat1.Id, "I feel sick");
+            var issue = _svc.AddAilment(pat.Id, "I feel sick");
+            _svc.AddAilmentSymptoms(issue.Id, new List<AilmentSymptom> {
+                    new AilmentSymptom { Ailment = issue, Symptom = sym0 },//Runny or stuffy nose
+                    new AilmentSymptom { Ailment = issue, Symptom = sym1 },//Cough
+                    new AilmentSymptom { Ailment = issue, Symptom = sym8 },//Headache
+                    new AilmentSymptom { Ailment = issue, Symptom = sym15 },//Sore throat                    
+                    new AilmentSymptom { Ailment = issue, Symptom = sym18 },//Muscle or body aches
+             });
+
+            var issue1 = _svc.AddAilment(pat1.Id, "I dont feel well");
              _svc.AddAilmentSymptoms(issue1.Id, new List<AilmentSymptom> {
                     new AilmentSymptom { Ailment = issue1, Symptom = sym0 },//Runny or stuffy nose
                     new AilmentSymptom { Ailment = issue1, Symptom = sym1 },//Cough
                     new AilmentSymptom { Ailment = issue1, Symptom = sym8 },//Headache
                     new AilmentSymptom { Ailment = issue1, Symptom = sym15 },//Sore throat                    
                     new AilmentSymptom { Ailment = issue1, Symptom = sym18 },//Muscle or body aches
+             });
+
+            var issue2 = _svc.AddAilment(pat2.Id, "My throat hurts");
+            _svc.AddAilmentSymptoms(issue2.Id, new List<AilmentSymptom> {
+                    new AilmentSymptom { Ailment = issue2, Symptom = sym8},//headache
+                    new AilmentSymptom { Ailment = issue2, Symptom = sym1 },//Cough
+                    new AilmentSymptom { Ailment = issue2, Symptom = sym15},//sore throat
+         
+             });
+
+            var issue3 = _svc.AddAilment(pat3.Id, "I feel tired");
+            _svc.AddAilmentSymptoms(issue3.Id, new List<AilmentSymptom> {
+                    new AilmentSymptom { Ailment = issue3, Symptom = sym14 },//tired (fatigue
+                    new AilmentSymptom { Ailment = issue3, Symptom = sym9 },//high temperature
+                    new AilmentSymptom { Ailment = issue3, Symptom = sym6 },//loss of sense of taste/smell
+                    new AilmentSymptom { Ailment = issue3, Symptom = sym10 },//new continous cough                    
+                    new AilmentSymptom { Ailment = issue3, Symptom = sym15},//sore throat
+                    new AilmentSymptom { Ailment = issue3, Symptom = sym15},//headache
+             });
+
+            var issue4 = _svc.AddAilment(pat4.Id, "I cant stop coughing");
+            _svc.AddAilmentSymptoms(issue4.Id, new List<AilmentSymptom> {
+                    new AilmentSymptom { Ailment = issue4, Symptom = sym7 },//coughing up thick mucus
+                    new AilmentSymptom { Ailment = issue4, Symptom = sym1 },//Cough
+                    new AilmentSymptom { Ailment = issue4, Symptom = sym15},//sore throat
+                    new AilmentSymptom { Ailment = issue4, Symptom = sym19 },//Breathing difficulty
+         
              });
 
             //https://www.nhs.uk/
