@@ -11,7 +11,7 @@ namespace Consultation.Data.Models
         public int Id { get; set; }
 
         [Required]
-        [StringLength(50, MinimumLength = 1)]
+        //[StringLength(50, MinimumLength = 1)]
         public string Issue { get; set; }
 
         [StringLength(500)]

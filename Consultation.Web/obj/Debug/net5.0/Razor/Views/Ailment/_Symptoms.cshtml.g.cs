@@ -34,7 +34,7 @@ using Consultation.Data.Models;
 #line hidden
 #nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"08773324304eb324811175885bdf3cdaca5065cf", @"/Views/Ailment/_Symptoms.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"187f31b766559566e6f23f38276dd61185384fc3", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"5d0ab407c6397a65906242bd2484ead0e9e10801", @"/Views/_ViewImports.cshtml")]
     public class Views_Ailment__Symptoms : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<IList<AilmentSymptom>>
     {
         #pragma warning disable 1998
