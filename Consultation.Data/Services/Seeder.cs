@@ -37,9 +37,7 @@ namespace Consultation.Data.Services
             // add doctors
             var doc = _svc.AddDoctor("Dr Peggy Smitler", Speciality.Cardiology, "doc@mail.com", "password", "+24364589034");
             var doc1 = _svc.AddDoctor("Dr Ray Fann", Speciality.Dermatology, "doc@email.com", "password", "+1354895768");
-
-            var issue1 = _svc.AddAilment(pat1.Id, "Im not feelin well");
-
+                        
             // add symptoms
             var sym0 = _svc.Addsymptom("Runny or stuffy nose");
             var sym1 = _svc.Addsymptom("Cough");
@@ -74,6 +72,14 @@ namespace Consultation.Data.Services
             var sym30 = _svc.Addsymptom("Upset stomach");
             var sym31 = _svc.Addsymptom("Straining to wee");
 
+            var issue1 = _svc.AddAilment(pat1.Id, "I feel sick");
+             _svc.AddAilmentSymptoms(issue1.Id, new List<AilmentSymptom> {
+                    new AilmentSymptom { Ailment = issue1, Symptom = sym0 },//Runny or stuffy nose
+                    new AilmentSymptom { Ailment = issue1, Symptom = sym1 },//Cough
+                    new AilmentSymptom { Ailment = issue1, Symptom = sym8 },//Headache
+                    new AilmentSymptom { Ailment = issue1, Symptom = sym15 },//Sore throat                    
+                    new AilmentSymptom { Ailment = issue1, Symptom = sym18 },//Muscle or body aches
+             });
 
             //https://www.nhs.uk/
             //https://www.cdc.gov/DiseasesConditions/az/a.html
