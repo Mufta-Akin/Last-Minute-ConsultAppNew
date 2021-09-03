@@ -22,8 +22,8 @@ namespace Consultation.Web.Controllers
             _svc = svc;
         }
 
- 
-        // GET: /ailment/Index
+
+        // GET: /ailment/Index--------------There is no need for this
         public IActionResult Index()
         {
             // display blank form to create a doctor

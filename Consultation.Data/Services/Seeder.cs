@@ -26,22 +26,19 @@ namespace Consultation.Data.Services
                         
             // add patients
             var pat = _svc.CreatePatient("Joanna Salome", "3454 Highway 22nd Bypass, Antrim", "pat@mail.com", "password", "0383458734650", new DateTime(2010, 1, 1));
-            var pat1 = _svc.CreatePatient("Fay Connor", "27 Blammer Road, Georgetown", "fay@mail.com", "password", "+1 2304564789", new DateTime(2000,1,1));
-            var pat2 = _svc.CreatePatient("Marty Bluffy", "7 Gainsville Avenue, Senate House", "marty@mail.com", "password", "+241 2467326493", new DateTime(1945,4,11));
-            var pat3 = _svc.CreatePatient("Gracie Tempper", "900 Briton Lane, Birminghan", "G_Temper@gomail.eu", "password", "+44 4905342773", new DateTime(1972,1,1));
-            var pat4 = _svc.CreatePatient("Drew Horne", "Westin House, apt 23, Luton", "flipper22@mail.uk", "password", "+44 3425239403", new DateTime(1991,1,1));
-            var pat5 = _svc.CreatePatient("Kong Leonne", "Unit 7 Ash Road Apartment, Derry", "Kong@goodmail.com", "password", "+23 8063788273", new DateTime(2010,1,1));
-            var pat6 = _svc.CreatePatient("Henrt Claimmer", "8804 Flaneggan Road, apt 2, London", "Claimmer.H@mail.net", "password", "03564495748", new DateTime(1964,1,1));
-            var pat7 = _svc.CreatePatient("Daniel Leopez", "Central Parkway, Apt 80, Oxford", "Dan@mail.com", "password", "06375465577", new DateTime(1983,1,1));
+            var pat1 = _svc.CreatePatient("Fay Connor", "27 Blammer Road, Georgetown", "pat1@mail.com", "password", "+1 2304564789", new DateTime(2000,1,1));
+            var pat2 = _svc.CreatePatient("Marty Bluffy", "7 Gainsville Avenue, Senate House", "pat2@mail.com", "password", "+241 2467326493", new DateTime(1945,4,11));
+            var pat3 = _svc.CreatePatient("Gracie Tempper", "900 Briton Lane, Birminghan", "pat3@gomail.eu", "password", "+44 4905342773", new DateTime(1972,1,1));
+            var pat4 = _svc.CreatePatient("Drew Horne", "Westin House, apt 23, Luton", "pat4@mail.uk", "password", "+44 3425239403", new DateTime(1991,1,1));
+            var pat5 = _svc.CreatePatient("Kong Leonne", "Unit 7 Ash Road Apartment, Derry", "pat5@mail.com", "password", "+23 8063788273", new DateTime(2010,1,1));
+            var pat6 = _svc.CreatePatient("Henrt Claimmer", "8804 Flaneggan Road, apt 2, London", "pat6@mail.net", "password", "03564495748", new DateTime(1964,1,1));
+            var pat7 = _svc.CreatePatient("Daniel Leopez", "Central Parkway, Apt 80, Oxford", "pat8@mail.com", "password", "06375465577", new DateTime(1983,1,1));
 
             // add doctors
             var doc = _svc.AddDoctor("Dr Peggy Smitler", Speciality.Cardiology, "doc@mail.com", "password", "+24364589034");
             var doc1 = _svc.AddDoctor("Dr Ray Fann", Speciality.Dermatology, "doc@email.com", "password", "+1354895768");
 
-            //var ailment = _svc.AddAilment(pat1.Id, "Im not feelin well");
-            //var ailment1 = _svc.AddAilment(pat1.Id, "I'm sick");
-            //var ailment2 = _svc.AddAilment(pat1.Id, "I feel tired");
-            //var ailment3 = _svc.AddAilment(pat1.Id, "Abdominal pain");
+            var issue1 = _svc.AddAilment(pat1.Id, "Im not feelin well");
 
             // add symptoms
             var sym0 = _svc.Addsymptom("Runny or stuffy nose");

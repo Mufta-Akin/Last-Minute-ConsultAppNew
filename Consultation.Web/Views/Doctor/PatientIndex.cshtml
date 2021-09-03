@@ -24,7 +24,7 @@
                 <td>
                     <a asp-controller="doctor" asp-action="PatientDetails" asp-route-id="@pat.Id" class="btn btn-info"> Details</a> |
                     <a asp-controller="doctor" asp-action="PatientEdit" asp-route-id="@pat.Id" class="btn btn-primary">Edit</a> |
-                    <a asp-controller="doctor" asp-action="DiagnosisDetails" asp-route-id="@pat.Id" class="btn btn-danger">Diagnosis</a>
+                    <a asp-controller="ailment" asp-action="Index" asp-route-id="@pat.Id" class="btn btn-danger">Diagnosis</a>
 
                 </td>
             </tr>
