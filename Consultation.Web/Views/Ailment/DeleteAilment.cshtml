@@ -1,7 +1,7 @@
 ﻿@model Consultation.Data.Models.Ailment
 
 @{
-    ViewData["Title"] = "Delete";
+    ViewData["Title"] = "DeleteAilment";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
@@ -50,9 +50,9 @@
         </dd class>
     </dl>
     
-    <form asp-action="Delete">
+    <form asp-action="DeleteAilment">
         <input type="hidden" asp-for="Id" />
-        <input type="submit" value="Delete" class="btn btn-danger" /> |
+        <input type="submit" value="DeleteAilment" class="btn btn-danger" /> |
         <a asp-controller="Patient" asp-action="Details">Cancel</a>
     </form>
 </div>

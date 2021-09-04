@@ -35,6 +35,8 @@ namespace Consultation.Test
         [Fact]
         public void User_EmptyDbShould_ReturnNoUsers()
         {
+            // arrange
+
             // act
             var users = svc.GetUsers();
 
@@ -131,6 +133,8 @@ namespace Consultation.Test
         [Fact]
         public void User_GetPatientByEmail_WhenEmptyDbShouldReturnNull()
         {
+            // arrange
+
             // act
             var users = svc.GetPatientByEmail("user@mail.net");
 
@@ -671,26 +675,7 @@ namespace Consultation.Test
             var temp = svc.Addsymptom("temperature");
             var appetite = svc.Addsymptom("loss of appetite");
             var itch = svc.Addsymptom("itchy skin");
-            var sweating = svc.Addsymptom("sweating");
-            var throat = svc.Addsymptom("sore throat");
-            var vomit = svc.Addsymptom("vomiting");
-            var rash = svc.Addsymptom("skin rashes");
-            var poo = svc.Addsymptom("diarrhoea");
-            var muscle = svc.Addsymptom("aching muscles");
-            var cough = svc.Addsymptom("cough");
-            var fever = svc.Addsymptom("fever");
-            var chest = svc.Addsymptom("chest pain");
-            var breath = svc.Addsymptom("difficulty breathing");
-            var constipate = svc.Addsymptom("constipation");
-            var tired = svc.Addsymptom("Lack of energy");
-            var libido = svc.Addsymptom("low sex drive");
-            var aches = svc.Addsymptom("body aches and pains");
-            var slur = svc.Addsymptom("speaking more slowly than usual");
-            var sleepless = svc.Addsymptom("disturbed sleep");
-            var sleepy = svc.Addsymptom("always feeling sleepy");
-            var slin = svc.Addsymptom("dry and scaly skin");
-            var brittle = svc.Addsymptom("brittle hair and nails");
-            var cycle = svc.Addsymptom("irregular or heavy periods");
+         
             // conditions 
             var flu = svc.AddCondition("Flu", "");
             svc.AddConditionSymptoms(flu.Id, new List<ConditionSymptom> {

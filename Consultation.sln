@@ -7,7 +7,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Consultation.Data", "Consul
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Consultation.Test", "Consultation.Test\Consultation.Test.csproj", "{8A803B6D-006A-4996-8DA5-B0087DB8B86C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Consultation.Web", "Consultation.Web\Consultation.Web.csproj", "{4660AA22-9DA1-4A9D-97AA-9BD9A53A74A9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Consultation.Web", "Consultation.Web\Consultation.Web.csproj", "{4660AA22-9DA1-4A9D-97AA-9BD9A53A74A9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

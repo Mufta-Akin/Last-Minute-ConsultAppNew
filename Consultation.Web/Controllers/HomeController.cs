@@ -50,7 +50,7 @@ namespace Consultation.Web.Controllers
             var about = new AboutViewModel
             {
                 Title = "About",
-                Message = "Partially Automated Online Consultation Using Data Matching Algorithm.",
+                Message = "Partially Automated Online Medical Consultation Web Application Using Matching Algorithm (ConsultApp).",
                 Formed = DateTime.Now
             };
             return View(about);
@@ -61,7 +61,7 @@ namespace Consultation.Web.Controllers
             var welcome = new AboutViewModel
             {
                 Title = "Welcome",
-                Message = "Partially Automated Online Consultation Using Data Matching Algorithm.",
+                Message = "Partially Automated Online Medical Consultation Web Application Using Matching Algorithm (ConsultApp).",
                 Formed = DateTime.Now
             };
             return View(welcome);

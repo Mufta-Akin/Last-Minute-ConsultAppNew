@@ -210,7 +210,6 @@ C:\Users\mufta\Desktop\WorkFolder\ConsultAppNew\Consultation.Web\obj\Debug\net5.
 C:\Users\mufta\Desktop\WorkFolder\ConsultAppNew\Consultation.Web\obj\Debug\net5.0\Razor\Views\Practice\StaffDetails.cshtml.g.cs
 C:\Users\mufta\Desktop\WorkFolder\ConsultAppNew\Consultation.Web\obj\Debug\net5.0\Razor\Views\Practice\StaffEdit.cshtml.g.cs
 C:\Users\mufta\Desktop\WorkFolder\ConsultAppNew\Consultation.Web\obj\Debug\net5.0\Razor\Views\Practice\StaffIndex.cshtml.g.cs
-C:\Users\mufta\Desktop\WorkFolder\ConsultAppNew\Consultation.Web\obj\Debug\net5.0\Razor\Views\Practice\_Ailments.cshtml.g.cs
 C:\Users\mufta\Desktop\WorkFolder\ConsultAppNew\Consultation.Web\obj\Debug\net5.0\Razor\Views\Practice\_DeleteModal.cshtml.g.cs
 C:\Users\mufta\Desktop\WorkFolder\ConsultAppNew\Consultation.Web\obj\Debug\net5.0\Razor\Views\Shared\Error.cshtml.g.cs
 C:\Users\mufta\Desktop\WorkFolder\ConsultAppNew\Consultation.Web\obj\Debug\net5.0\Razor\Views\Shared\_Alert.cshtml.g.cs
@@ -245,3 +244,4 @@ C:\Users\mufta\Desktop\WorkFolder\ConsultAppNew\Consultation.Web\obj\Debug\net5.
 C:\Users\mufta\Desktop\WorkFolder\ConsultAppNew\Consultation.Web\obj\Debug\net5.0\ref\Consultation.Web.dll
 C:\Users\mufta\Desktop\WorkFolder\ConsultAppNew\Consultation.Web\obj\Debug\net5.0\Consultation.Web.pdb
 C:\Users\mufta\Desktop\WorkFolder\ConsultAppNew\Consultation.Web\obj\Debug\net5.0\Consultation.Web.genruntimeconfig.cache
+C:\Users\mufta\Desktop\WorkFolder\ConsultAppNew\Consultation.Web\obj\Debug\net5.0\Razor\Views\Ailment\DeleteAilment.cshtml.g.cs

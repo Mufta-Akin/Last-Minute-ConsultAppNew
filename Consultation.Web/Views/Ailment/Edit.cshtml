@@ -1,60 +1,46 @@
-﻿@model Consultation.Data.Models.Ailment
+﻿@model AilmentViewModel
 
-@{
-    ViewData["Title"] = "Edit";
-    Layout = "~/Views/Shared/_Layout.cshtml";
-}
+<partial name="_Breadcrumbs" model=@(new [] {
+    ("/", "Home"),
+    ("/patient", "Patients"),
+    ($"/patient/details/{Model.PatientId}", $"{Model.PatientId}"),
+    ("","Edit Ailment") })>
 
-<h1>Edit</h1>
+    <h3 class="mt-4 mb-4">Edit Ailment</h3>
 
-<h4>Ailment</h4>
-<hr />
-<div class="row">
-    <div class="col-md-4">
-        <form asp-action="Edit">
-            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <input type="hidden" asp-for="Id" />
-            <div class="form-group">
-                <label asp-for="Issue" class="control-label"></label>
-                <input asp-for="Issue" class="form-control" />
-                <span asp-validation-for="Issue" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Resolution" class="control-label"></label>
-                <input asp-for="Resolution" class="form-control" />
-                <span asp-validation-for="Resolution" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="CreatedOn" class="control-label"></label>
-                <input asp-for="CreatedOn" class="form-control" />
-                <span asp-validation-for="CreatedOn" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="ResolvedOn" class="control-label"></label>
-                <input asp-for="ResolvedOn" class="form-control" />
-                <span asp-validation-for="ResolvedOn" class="text-danger"></span>
-            </div>
-            <div class="form-group form-check">
-                <label class="form-check-label">
-                    <input class="form-check-input" asp-for="Active" /> @Html.DisplayNameFor(model => model.Active)
-                </label>
-            </div>
-            <div class="form-group">
-                <label asp-for="PatientId" class="control-label"></label>
-                <select asp-for="PatientId" class="form-control" asp-items="ViewBag.PatientId"></select>
-                <span asp-validation-for="PatientId" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <input type="submit" value="Save" class="btn btn-primary" />
-            </div>
-        </form>
-    </div>
-</div>
+    <form asp-action="Edit">
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
 
-<div>
-    <a asp-action="Index">Back to List</a>
-</div>
+        <!-- we hide the Model PatientId as its not user editable but needs to be in the form  -->
+        <!-- to ensure the Ailment passed to the controller is complete.                        -->
+        <input type="hidden" asp-for="PatientId" class="form-control" />
 
-@section Scripts {
-    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
-}
+        <!-- CreatedOn and Active are not required in the form and are set in contoller before -->
+        <!-- passing to service. Issue should be a TextArea input  with 5 rows                 -->
+        <div class="form-group">
+            <label asp-for="Issue" class="control-label"></label>
+            <textarea rows="5" asp-for="Issue" class="form-control"></textarea>
+            <span asp-validation-for="Issue" class="text-danger"></span>
+        </div>
+
+
+
+
+        <!-- multiselect list of symptoms displayed and selected symptom ids are added to the SelectedSymptomIds list -->
+        <div class="form-group mt-3">
+            <p class="text-warning bg-dark">Ctrl+Select all primary symptoms that apply</p>
+            @*<label asp-for="SelectedSymptomIds" class="control-label"></label>*@
+            <select asp-for="SelectedSymptomIds" class="form-control" asp-items="@Model.Symptoms" multiple="multiple" size="21">
+            </select>
+        </div>
+
+        <div class="form-group">
+            <input type="submit" value="Save" class="btn btn-primary" />
+            <a class="btn btn-secondary" asp-controller="Patient" asp-action="Details" asp-route-id=@Model.PatientId>Cancel</a>
+        </div>
+
+    </form>
+
+    @section Scripts {
+        @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    }

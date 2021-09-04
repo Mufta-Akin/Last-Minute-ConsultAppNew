@@ -24,8 +24,8 @@
                 <td>@pat.ResolvedOn</td>
                 <td>@pat.Active</td>
                 <td>
-                    <a asp-controller="ailment" asp-action="ADetails" asp-route-id="@pat.Id"> Details</a> |
-                    <a asp-controller="ailment" asp-action="Delete" asp-route-id="@pat.Id">Delete</a>
+                    <a asp-controller="ailment" asp-action="ADetails" class="btn btn-info" asp-route-id="@pat.Id"> Details</a> |
+                    <a asp-controller="ailment" asp-action="DeleteAilment" class="btn btn-danger" asp-route-id="@pat.Id">Delete</a>
 
                 </td>
             </tr>

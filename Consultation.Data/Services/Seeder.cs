@@ -28,8 +28,8 @@ namespace Consultation.Data.Services
             var pat = _svc.CreatePatient("Joanna Salome", "3454 Highway 22nd Bypass, Antrim", "pat@mail.com", "password", "0383458734650", new DateTime(2010, 1, 1));
             var pat1 = _svc.CreatePatient("Fay Connor", "27 Blammer Road, Georgetown", "pat1@mail.com", "password", "+1 2304564789", new DateTime(2000,1,1));
             var pat2 = _svc.CreatePatient("Marty Bluffy", "7 Gainsville Avenue, Senate House", "pat2@mail.com", "password", "+241 2467326493", new DateTime(1945,4,11));
-            var pat3 = _svc.CreatePatient("Gracie Tempper", "900 Briton Lane, Birminghan", "pat3@gomail.eu", "password", "+44 4905342773", new DateTime(1972,1,1));
-            var pat4 = _svc.CreatePatient("Drew Horne", "Westin House, apt 23, Luton", "pat4@mail.uk", "password", "+44 3425239403", new DateTime(1991,1,1));
+            var pat3 = _svc.CreatePatient("Gracie Tempper", "900 Briton Lane, Birminghan", "pat3@mail.com", "password", "+44 4905342773", new DateTime(1972,1,1));
+            var pat4 = _svc.CreatePatient("Drew Horne", "Westin House, apt 23, Luton", "pat4@mail.com", "password", "+44 3425239403", new DateTime(1991,1,1));
 
             // add doctors
             var doc = _svc.AddDoctor("Dr Peggy Smitler", Speciality.Cardiology, "doc@mail.com", "password", "+24364589034");

@@ -201,7 +201,36 @@ namespace Consultation.Web.Controllers
 
             Alert($"Symptom {id} deleted successfully", AlertType.success);
             // redirect to the index view
-            return RedirectToAction(nameof(Index));
+            return RedirectToAction("Details", "Patient");
+        }
+
+        // GET:  Doctor/Ailment/Delete
+        public IActionResult DeleteAilment(int id)
+        {
+            // load the ailment using the service
+            var ailment = _svc.GetAilment(id);
+            // check the returned symptom is not null and if so return NotFound()
+            if (ailment == null)
+            {
+                Alert("Symptom Not Found", AlertType.warning);
+                return RedirectToAction(nameof(Index));
+            }
+
+            // pass symptom to view for deletion confirmation
+            return View(ailment);
+        }
+
+        // POST: Doctor/Symptoms/Delete
+        [HttpPost, ActionName("DeleteAilment")]
+        [ValidateAntiForgeryToken]
+        public IActionResult Delete2Confirmed(int id)
+        {
+            // delete symptom via service
+            _svc.DeleteAilment(id);
+
+            Alert($"Symptom {id} deleted successfully", AlertType.success);
+            // redirect to the index view
+            return RedirectToAction("AilmentIndex", "Doctor");
         }
 
     }
