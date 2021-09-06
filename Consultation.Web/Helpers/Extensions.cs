@@ -26,16 +26,17 @@ namespace Consultation.Web
         // ----------------------------- AUTHENTICATION --------------------------------//
 
         // IServiceCollection extension method adding cookie authentication 
-        public static void AddCookieAuthentication(this IServiceCollection services, 
-                                                        string notAuthorised = "/User/ErrorNotAuthorised", 
-                                                        string notAuthenticated= "/User/ErrorNotAuthenticated")
+        public static void AddCookieAuthentication(this IServiceCollection services,
+                                                        string notAuthorised = "/User/ErrorNotAuthorised",
+                                                        string notAuthenticated = "/User/ErrorNotAuthenticated")
         {
             services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
-                    .AddCookie(options => {
+                    .AddCookie(options =>
+                    {
                         options.AccessDeniedPath = notAuthorised;
                         options.LoginPath = notAuthenticated;
-            });
+                    });
         }
- 
+
     }
 }

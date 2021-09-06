@@ -1,8 +1,6 @@
 ﻿@model Consultation.Data.Models.Diagnosis
 
-@{
-    ViewData["Title"] = "Create";
-}
+@{ ViewData["Title"] = "Create"; }
 
 <h1>Create</h1>
 
@@ -24,11 +22,11 @@
             </div>
             <div class="form-group">
                 <label asp-for="DoctorId" class="control-label"></label>
-                <select asp-for="DoctorId" class ="form-control" asp-items="ViewBag.DoctorId"></select>
+                <select asp-for="DoctorId" class="form-control" asp-items="ViewBag.DoctorId"></select>
             </div>
             <div class="form-group">
                 <label asp-for="PatientId" class="control-label"></label>
-                <select asp-for="PatientId" class ="form-control" asp-items="ViewBag.PatientId"></select>
+                <select asp-for="PatientId" class="form-control" asp-items="ViewBag.PatientId"></select>
             </div>
             <div class="form-group">
                 <label asp-for="Description" class="control-label"></label>

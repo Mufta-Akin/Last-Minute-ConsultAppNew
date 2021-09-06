@@ -24,19 +24,20 @@ namespace Consultation.Web.ViewModels
         [Required]
         [StringLength(15)]
         public string Mobile { get; set; }
-   
+
         public Doctor ToDoctor()
         {
-            return new Doctor {
+            return new Doctor
+            {
                 Id = Id,
                 Speciality = Speciality,
                 Mobile = Mobile,
-                User = new User 
+                User = new User
                 {
                     Name = Name,
                     Password = Password,
                     Email = Email
-                }    
+                }
             };
         }
 

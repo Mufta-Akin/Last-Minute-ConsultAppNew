@@ -10,9 +10,6 @@ namespace Consultation.Web.ViewModels
 {
     public class AilmentViewModel
     {
-        // selectlist of patients (id, name)       
-        //public SelectList Patients { set; get; }
-
         // Collecting PatientId and Issue in Form
         [Required]
         public int PatientId { get; set; }
@@ -21,8 +18,8 @@ namespace Consultation.Web.ViewModels
         [StringLength(150, MinimumLength = 3)]
         public string Issue { get; set; }
 
-        public List<int> SelectedSymptomIds { get; set;}
+        public List<int> SelectedSymptomIds { get; set; }
 
-        public MultiSelectList Symptoms { get; set;}
+        public MultiSelectList Symptoms { get; set; }
     }
 }

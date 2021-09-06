@@ -25,8 +25,8 @@ namespace Template.Web.Controllers
         private readonly IUserService _svc;
 
         public UserController(IUserService svc, IConfiguration config)
-        {        
-            _config = config;    
+        {
+            _config = config;
             _svc = svc;
         }
 
@@ -63,16 +63,17 @@ namespace Template.Web.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public IActionResult Register([Bind("Name,Email,Password,PasswordConfirm,Role")] UserRegisterViewModel m)       
+        public IActionResult Register([Bind("Name,Email,Password,PasswordConfirm,Role")] UserRegisterViewModel m)
         {
             if (!ModelState.IsValid)
             {
                 return View(m);
             }
             // add user via service
-            var user = _svc.AddUser(m.Name, m.Email,m.Password, m.Role);
+            var user = _svc.AddUser(m.Name, m.Email, m.Password, m.Role);
             // check if error adding user and display warning
-            if (user == null) {
+            if (user == null)
+            {
                 Alert("There was a problem Registering. Please try again", AlertType.warning);
                 return View(m);
             }
@@ -85,12 +86,13 @@ namespace Template.Web.Controllers
         [Authorize]
         public IActionResult UpdateProfile()
         {
-           // use BaseClass helper method to retrieve Id of signed in user 
+            // use BaseClass helper method to retrieve Id of signed in user 
             var user = _svc.GetUser(GetSignedInUserId());
-            var userViewModel = new UserManageViewModel { 
-                Id = user.Id, 
-                Name = user.Name, 
-                Email = user.Email,                 
+            var userViewModel = new UserManageViewModel
+            {
+                Id = user.Id,
+                Name = user.Name,
+                Email = user.Email,
                 Role = user.Role
             };
             return View(userViewModel);
@@ -99,33 +101,34 @@ namespace Template.Web.Controllers
         [Authorize]
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> UpdateProfile([Bind("Id,Name,Email,Role")] UserManageViewModel m)       
+        public async Task<IActionResult> UpdateProfile([Bind("Id,Name,Email,Role")] UserManageViewModel m)
         {
             var user = _svc.GetUser(m.Id);
             // check if form is invalid and redisplay
             if (!ModelState.IsValid || user == null)
             {
                 return View(m);
-            } 
+            }
 
             // update user details and call service
             user.Name = m.Name;
             user.Email = m.Email;
-            user.Role = m.Role;        
+            user.Role = m.Role;
             var updated = _svc.UpdateUser(user);
 
             // check if error updating service
-            if (updated == null) {
+            if (updated == null)
+            {
                 Alert("There was a problem Updating. Please try again", AlertType.warning);
                 return View(m);
             }
 
             Alert("Successfully Updated Account Details", AlertType.info);
-            
+
             // sign the user in with updated details)
             await SignInCookie(user);
 
-            return RedirectToAction("Index","Home");
+            return RedirectToAction("Index", "Home");
         }
 
         // Change Password
@@ -134,10 +137,11 @@ namespace Template.Web.Controllers
         {
             // use BaseClass helper method to retrieve Id of signed in user 
             var user = _svc.GetUser(GetSignedInUserId());
-            var passwordViewModel = new UserPasswordViewModel { 
-                Id = user.Id, 
-                Password = user.Password, 
-                PasswordConfirm = user.Password, 
+            var passwordViewModel = new UserPasswordViewModel
+            {
+                Id = user.Id,
+                Password = user.Password,
+                PasswordConfirm = user.Password,
             };
             return View(passwordViewModel);
         }
@@ -145,18 +149,19 @@ namespace Template.Web.Controllers
         [Authorize]
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> UpdatePassword([Bind("Id,OldPassword,Password,PasswordConfirm")] UserPasswordViewModel m)       
+        public async Task<IActionResult> UpdatePassword([Bind("Id,OldPassword,Password,PasswordConfirm")] UserPasswordViewModel m)
         {
             var user = _svc.GetUser(m.Id);
             if (!ModelState.IsValid || user == null)
             {
                 return View(m);
-            }  
+            }
             // update the password
-            user.Password = m.Password; 
+            user.Password = m.Password;
             // save changes      
             var updated = _svc.UpdateUser(user);
-            if (updated == null) {
+            if (updated == null)
+            {
                 Alert("There was a problem Updating the password. Please try again", AlertType.warning);
                 return View(m);
             }
@@ -165,7 +170,7 @@ namespace Template.Web.Controllers
             // sign the user in with updated details
             await SignInCookie(user);
 
-            return RedirectToAction("Index","Home");
+            return RedirectToAction("Index", "Home");
         }
 
         [HttpPost]
@@ -193,7 +198,7 @@ namespace Template.Web.Controllers
             {
                 return Json($"A user with this email address {email} already exists.");
             }
-            return Json(true);                  
+            return Json(true);
         }
 
         // Called by Remote Validation attribute on ChangePassword to verify old password
@@ -201,14 +206,14 @@ namespace Template.Web.Controllers
         public IActionResult VerifyPassword(string oldPassword)
         {
             // use BaseClass helper method to retrieve Id of signed in user 
-            var id = GetSignedInUserId();            
+            var id = GetSignedInUserId();
             // check if email is available, unless already owned by user with id
             var user = _svc.GetUser(id);
             if (user == null || !Hasher.ValidateHash(user.Password, oldPassword))
             {
                 return Json($"Please enter current password.");
             }
-            return Json(true);                  
+            return Json(true);
         }
 
         // Sign user in using Cookie authentication scheme

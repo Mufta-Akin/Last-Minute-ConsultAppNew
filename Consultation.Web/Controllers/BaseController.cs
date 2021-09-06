@@ -23,7 +23,8 @@ namespace Consultation.Web.Controllers
         {
             try
             {
-                if (User.Identity.IsAuthenticated) {
+                if (User.Identity.IsAuthenticated)
+                {
                     // id stored as a string in the Sid claim - convert to an int and return
                     string sid = User.Claims.SingleOrDefault(c => c.Type == ClaimTypes.Sid).Value;
                     return Int32.Parse(sid);
@@ -32,14 +33,14 @@ namespace Consultation.Web.Controllers
             catch (FormatException) { }
             return 0;
         }
-        
+
         // check if user us currently authenticated
-        public bool IsAuthenticated() 
+        public bool IsAuthenticated()
         {
             return User.Identity.IsAuthenticated;
         }
 
     }
 
- 
+
 }

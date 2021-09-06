@@ -675,7 +675,7 @@ namespace Consultation.Test
             var temp = svc.Addsymptom("temperature");
             var appetite = svc.Addsymptom("loss of appetite");
             var itch = svc.Addsymptom("itchy skin");
-         
+
             // conditions 
             var flu = svc.AddCondition("Flu", "");
             svc.AddConditionSymptoms(flu.Id, new List<ConditionSymptom> {

@@ -106,7 +106,7 @@ namespace Consultation.Web.Controllers
         [HttpPost]
         [ValidateAntiForgeryToken]
         public IActionResult DoctorEdit(int id, DoctorViewModel doc)
-        {            
+        {
             // validate doctor
             if (ModelState.IsValid)
             {
@@ -231,7 +231,7 @@ namespace Consultation.Web.Controllers
         }
 
         //-----------Diagnosis Actions in Doctor Controller------------
-      
+
         //// GET: Diagnoses
         //public IActionResult DiagnosisIndex()
         //{
@@ -247,7 +247,7 @@ namespace Consultation.Web.Controllers
             {
                 return NotFound();
             }
-                        
+
             return View(diagnosis);
         }
 

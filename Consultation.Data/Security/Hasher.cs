@@ -9,7 +9,7 @@ using System.Text.RegularExpressions;
 namespace Consultation.Data.Security
 {
     public static class Hasher
-    {    
+    {
         // AMC - verify if a string is already hashed
         public static bool IsHashed(string base64)
         {
@@ -17,13 +17,13 @@ namespace Consultation.Data.Security
             {
                 base64 = base64.Trim();
                 var parts = base64.Split(':');
-                var isSaltBase64  = (parts[0].Length % 4 == 0) && Regex.IsMatch(parts[0], @"^[a-zA-Z0-9\+/]*={0,3}$", RegexOptions.None);
+                var isSaltBase64 = (parts[0].Length % 4 == 0) && Regex.IsMatch(parts[0], @"^[a-zA-Z0-9\+/]*={0,3}$", RegexOptions.None);
                 var isHashBaseH64 = (parts[1].Length % 4 == 0) && Regex.IsMatch(parts[1], @"^[a-zA-Z0-9\+/]*={0,3}$", RegexOptions.None);
                 return isSaltBase64 && isHashBaseH64;
             }
-            return false;           
+            return false;
         }
-        
+
         // Generated Salt and Hash returned
         public static string CalculateHash(string input)
         {
@@ -54,7 +54,8 @@ namespace Consultation.Data.Security
                 var salt = Convert.FromBase64String(parts[0]);
                 var bytes = KeyDerivation.Pbkdf2(input, salt, KeyDerivationPrf.HMACSHA512, 10000, 16);
                 return parts[1].Equals(Convert.ToBase64String(bytes));
-            } catch { return false; }            
+            }
+            catch { return false; }
         }
 
     }

@@ -40,13 +40,14 @@ namespace Consultation.Web.Controllers
                 Alert("Ailment Not Found", AlertType.warning);
                 return RedirectToAction(nameof(Index));
             }
-           
-            var vm = new AilmentConditionViewModel {
+
+            var vm = new AilmentConditionViewModel
+            {
                 Id = ailment.Id,
                 Issue = ailment.Issue,
                 Resolution = ailment.Resolution,
                 CreatedOn = ailment.CreatedOn,
-                ResolvedOn= ailment.ResolvedOn,
+                ResolvedOn = ailment.ResolvedOn,
                 Active = ailment.Active,
                 PatientId = ailment.PatientId,
                 PatientName = ailment.Patient.User.Name,
@@ -106,7 +107,7 @@ namespace Consultation.Web.Controllers
 
             return View("Create", ailment);
         }
-       
+
 
         // POST /patient/createailment
         [HttpPost]
@@ -131,7 +132,7 @@ namespace Consultation.Web.Controllers
             return RedirectToAction("Details", "Patient", new { Id = m.PatientId });
         }
 
-        
+
 
         public IActionResult Edit(int id)
         {

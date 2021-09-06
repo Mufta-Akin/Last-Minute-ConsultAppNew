@@ -52,7 +52,7 @@ namespace Consultation.Web.Controllers
             Condition condition1 = ((Condition)condition);
             Console.WriteLine("Your Condition is " + condition);
             return ((bool)condition);
-            
+
         }
     }
 }

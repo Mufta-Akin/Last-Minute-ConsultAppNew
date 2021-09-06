@@ -1,32 +1,32 @@
 ﻿@model Condition
 
 
-    <h3 class="mt=4 mb-4">Condition Details</h3>
+<h3 class="mt=4 mb-4">Condition Details</h3>
 
-    <!-- Description list of condition details -->
-    <dl class="row">
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.Name)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.Name)
-        </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.DiagnosedDate)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.DiagnosedDate)
-        </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.Description)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.Description)
-        </dd>
-    </dl>
+<!-- Description list of condition details -->
+<dl class="row">
+    <dt class="col-sm-2">
+        @Html.DisplayNameFor(model => model.Name)
+    </dt>
+    <dd class="col-sm-10">
+        @Html.DisplayFor(model => model.Name)
+    </dd>
+    <dt class="col-sm-2">
+        @Html.DisplayNameFor(model => model.DiagnosedDate)
+    </dt>
+    <dd class="col-sm-10">
+        @Html.DisplayFor(model => model.DiagnosedDate)
+    </dd>
+    <dt class="col-sm-2">
+        @Html.DisplayNameFor(model => model.Description)
+    </dt>
+    <dd class="col-sm-10">
+        @Html.DisplayFor(model => model.Description)
+    </dd>
+</dl>
 
-    <div>
-        <a asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-info">Edit</a> |
-        <a asp-action="Index" class="btn btn-secondary">Back to Index</a>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-info">Edit</a> |
+    <a asp-action="Index" class="btn btn-secondary">Back to Index</a>
 
-    </div>
+</div>

@@ -189,7 +189,6 @@ C:\Users\mufta\Desktop\WorkFolder\ConsultAppNew\Consultation.Web\obj\Debug\net5.
 C:\Users\mufta\Desktop\WorkFolder\ConsultAppNew\Consultation.Web\obj\Debug\net5.0\Razor\Views\Patient\Edit.cshtml.g.cs
 C:\Users\mufta\Desktop\WorkFolder\ConsultAppNew\Consultation.Web\obj\Debug\net5.0\Razor\Views\Patient\Index.cshtml.g.cs
 C:\Users\mufta\Desktop\WorkFolder\ConsultAppNew\Consultation.Web\obj\Debug\net5.0\Razor\Views\Patient\_Ailments.cshtml.g.cs
-C:\Users\mufta\Desktop\WorkFolder\ConsultAppNew\Consultation.Web\obj\Debug\net5.0\Razor\Views\Practice\CreateSymptom.cshtml.g.cs
 C:\Users\mufta\Desktop\WorkFolder\ConsultAppNew\Consultation.Web\obj\Debug\net5.0\Razor\Views\Practice\DoctorCreate.cshtml.g.cs
 C:\Users\mufta\Desktop\WorkFolder\ConsultAppNew\Consultation.Web\obj\Debug\net5.0\Razor\Views\Practice\DoctorDelete.cshtml.g.cs
 C:\Users\mufta\Desktop\WorkFolder\ConsultAppNew\Consultation.Web\obj\Debug\net5.0\Razor\Views\Practice\DoctorDetails.cshtml.g.cs

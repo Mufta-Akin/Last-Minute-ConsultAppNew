@@ -30,17 +30,18 @@ namespace Consultation.Web.ViewModels
 
         public Patient ToPatient()
         {
-            return new Patient {
+            return new Patient
+            {
                 Id = Id,
                 Address = Address,
                 Mobile = Mobile,
                 Dob = Dob,
-                User = new User 
+                User = new User
                 {
                     Name = Name,
                     Password = Password,
                     Email = Email
-                }    
+                }
             };
         }
 

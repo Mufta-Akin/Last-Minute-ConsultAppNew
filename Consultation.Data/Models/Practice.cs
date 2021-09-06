@@ -21,7 +21,8 @@ namespace Consultation.Data.Models
         [Required]
         public DateTime Dob { get; set; }
 
-        public int Age => new DateTime((DateTime.Now - Dob).Ticks).Year;//datetime dob with readonly property to calculate age
+        //datetime dob with readonly property to calculate age
+        public int Age => new DateTime((DateTime.Now - Dob).Ticks).Year;
 
         // Related User Foreign Key
         public int UserId { get; set; }

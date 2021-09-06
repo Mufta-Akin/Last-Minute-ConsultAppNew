@@ -10,7 +10,7 @@ namespace Consultation.Web.ViewModels
 
         [Required]
         public string Name { get; set; }
- 
+
         [Required]
         [EmailAddress]
         [Remote(action: "GetUserByEmailAddress", controller: "User")]

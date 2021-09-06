@@ -3,15 +3,15 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
 
 // import the Models (representing structure of tables in database)
-using Consultation.Data.Models; 
+using Consultation.Data.Models;
 
 namespace Consultation.Data.Repositories
 {
     // The Context is How EntityFramework communicates with the database
     // We define DbSet properties for each table in the database
-    public class DatabaseContext :DbContext
+    public class DatabaseContext : DbContext
     {
-         // authentication store
+        // authentication store
         public DbSet<User> Users { get; set; }
         public DbSet<Practice> Practice { get; set; }
         public DbSet<Ailment> Ailments { get; set; }

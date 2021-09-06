@@ -20,15 +20,15 @@
             @foreach (var doc in Model)
             {
                 <tr>
-                    <td>@doc.Id</td>
-                    <td>@doc.User.Name</td>
-                    <td>@doc.Speciality</td>
-                    <td>@doc.User.Email</td>
-                    <td>@doc.Mobile</td>
-                    <td>
-                        <a asp-controller="Doctor" asp-action="DoctorDetails" asp-route-id="@doc.Id" class="btn btn-info">Details</a>
-                    </td>
-                </tr>
+                <td>@doc.Id</td>
+                <td>@doc.User.Name</td>
+                <td>@doc.Speciality</td>
+                <td>@doc.User.Email</td>
+                <td>@doc.Mobile</td>
+                <td>
+                    <a asp-controller="Doctor" asp-action="DoctorDetails" asp-route-id="@doc.Id" class="btn btn-info">Details</a>
+                </td>
+                </tr>           
             }
         </tbody>
     </table>

@@ -25,6 +25,6 @@ namespace Consultation.Web.Controllers
             // dashboard for Ailment   
             return View();
         }
-                    
+
     }
 }

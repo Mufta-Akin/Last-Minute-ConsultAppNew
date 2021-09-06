@@ -9,16 +9,16 @@ namespace Consultation.Data.Services
 {
     public class UserService : IUserService
     {
-        private readonly DatabaseContext  ctx;
+        private readonly DatabaseContext ctx;
 
         public UserService()
         {
-            ctx = new DatabaseContext(); 
+            ctx = new DatabaseContext();
         }
 
         public void Initialise()
         {
-           ctx.Initialise(); 
+            ctx.Initialise();
         }
 
         // retrieve list of Users
@@ -35,19 +35,19 @@ namespace Consultation.Data.Services
 
         // Add a new User checking a User with same email does not exist
         public User AddUser(string name, string email, string password, Role role)
-        {     
+        {
             var existing = GetUserByEmail(email);
             if (existing != null)
             {
                 return null;
-            } 
+            }
 
             var user = new User
-            {            
+            {
                 Name = name,
                 Email = email,
                 Password = Hasher.CalculateHash(password), // can hash if required 
-                Role = role              
+                Role = role
             };
             ctx.Users.Add(user);
             ctx.SaveChanges();
@@ -79,19 +79,19 @@ namespace Consultation.Data.Services
             // update the details of the User retrieved and save
             User.Name = updated.Name;
             User.Email = updated.Email;
-            User.Password = Hasher.CalculateHash(updated.Password);  
-            User.Role = updated.Role; 
+            User.Password = Hasher.CalculateHash(updated.Password);
+            User.Role = updated.Role;
 
-            ctx.SaveChanges();          
+            ctx.SaveChanges();
             return User;
         }
 
-        public User GetUserByEmail(string email, int? id=null)
+        public User GetUserByEmail(string email, int? id = null)
         {
-            return ctx.Users.FirstOrDefault(u => u.Email == email && ( id == null || u.Id != id));
+            return ctx.Users.FirstOrDefault(u => u.Email == email && (id == null || u.Id != id));
         }
 
-        public IList<User> GetUsersQuery(Func<User,bool> q)
+        public IList<User> GetUsersQuery(Func<User, bool> q)
         {
             return ctx.Users.Where(q).ToList();
         }
@@ -105,6 +105,6 @@ namespace Consultation.Data.Services
             return (user != null && Hasher.ValidateHash(user.Password, password)) ? user : null;
             //return (user != null && user.Password == password ) ? user: null;
         }
-   
+
     }
 }
