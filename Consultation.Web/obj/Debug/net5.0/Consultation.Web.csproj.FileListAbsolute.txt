@@ -159,6 +159,7 @@ C:\Users\mufta\Desktop\WorkFolder\ConsultAppNew\Consultation.Web\obj\Debug\net5.
 C:\Users\mufta\Desktop\WorkFolder\ConsultAppNew\Consultation.Web\obj\Debug\net5.0\Razor\Views\Ailment\ADetails.cshtml.g.cs
 C:\Users\mufta\Desktop\WorkFolder\ConsultAppNew\Consultation.Web\obj\Debug\net5.0\Razor\Views\Ailment\Create.cshtml.g.cs
 C:\Users\mufta\Desktop\WorkFolder\ConsultAppNew\Consultation.Web\obj\Debug\net5.0\Razor\Views\Ailment\Delete.cshtml.g.cs
+C:\Users\mufta\Desktop\WorkFolder\ConsultAppNew\Consultation.Web\obj\Debug\net5.0\Razor\Views\Ailment\DeleteAilment.cshtml.g.cs
 C:\Users\mufta\Desktop\WorkFolder\ConsultAppNew\Consultation.Web\obj\Debug\net5.0\Razor\Views\Ailment\Details.cshtml.g.cs
 C:\Users\mufta\Desktop\WorkFolder\ConsultAppNew\Consultation.Web\obj\Debug\net5.0\Razor\Views\Ailment\Edit.cshtml.g.cs
 C:\Users\mufta\Desktop\WorkFolder\ConsultAppNew\Consultation.Web\obj\Debug\net5.0\Razor\Views\Ailment\Index.cshtml.g.cs
@@ -243,4 +244,3 @@ C:\Users\mufta\Desktop\WorkFolder\ConsultAppNew\Consultation.Web\obj\Debug\net5.
 C:\Users\mufta\Desktop\WorkFolder\ConsultAppNew\Consultation.Web\obj\Debug\net5.0\ref\Consultation.Web.dll
 C:\Users\mufta\Desktop\WorkFolder\ConsultAppNew\Consultation.Web\obj\Debug\net5.0\Consultation.Web.pdb
 C:\Users\mufta\Desktop\WorkFolder\ConsultAppNew\Consultation.Web\obj\Debug\net5.0\Consultation.Web.genruntimeconfig.cache
-C:\Users\mufta\Desktop\WorkFolder\ConsultAppNew\Consultation.Web\obj\Debug\net5.0\Razor\Views\Ailment\DeleteAilment.cshtml.g.cs

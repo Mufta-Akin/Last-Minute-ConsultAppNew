@@ -39,7 +39,7 @@ namespace Consultation.Data.Services
             var sym0 = _svc.Addsymptom("Runny or stuffy nose");
             var sym1 = _svc.Addsymptom("Cough");
             var sym2 = _svc.Addsymptom("Vomiting");
-            var sym3 = _svc.Addsymptom("Diarrhea");
+            var sym3 = _svc.Addsymptom("Diarrhoea");
             var sym4 = _svc.Addsymptom("Loss of appetite");
             var sym5 = _svc.Addsymptom("Repeated thrush");
             var sym6 = _svc.Addsymptom("Loss of sense of taste or smell");
@@ -131,7 +131,7 @@ namespace Consultation.Data.Services
                     new ConditionSymptom { Condition = con2, Symptom = sym15},//sore throat
                     new ConditionSymptom { Condition = con2, Symptom = sym7 },//coughing up thick mucus
                     new ConditionSymptom { Condition = con2, Symptom = sym19 },//Breathing difficulty
-                    new ConditionSymptom { Condition = con2, Symptom = sym2 },//vomitting
+                    new ConditionSymptom { Condition = con2, Symptom = sym2 },//vomiting
              });
 
             var con3 = _svc.AddCondition("Malaria", "Malaria");
@@ -140,7 +140,8 @@ namespace Consultation.Data.Services
                     new ConditionSymptom { Condition = con3, Symptom = sym8},//headache
                     new ConditionSymptom { Condition = con3, Symptom = sym18 },//muscle or body aches
                     new ConditionSymptom { Condition = con3, Symptom = sym3 },//diarrhoea
-                    new ConditionSymptom { Condition = con3, Symptom = sym2 },//vomitting
+                    new ConditionSymptom { Condition = con3, Symptom = sym2 },//vomiting
+                    new ConditionSymptom { Condition = con3, Symptom = sym17 },//fever
              });
 
             var con4 = _svc.AddCondition("Diabetes", "Diabetes");
@@ -171,7 +172,7 @@ namespace Consultation.Data.Services
                     new ConditionSymptom { Condition = con6, Symptom = sym9 },//high temperature                    
                     new ConditionSymptom { Condition = con6, Symptom = sym8 },//headache
                     new ConditionSymptom { Condition = con6, Symptom = sym15},//sore throat
-                    new ConditionSymptom { Condition = con6, Symptom = sym10 },//new continous cough
+                    new ConditionSymptom { Condition = con6, Symptom = sym10 },//new continuous cough
                     new ConditionSymptom { Condition = con6, Symptom = sym6 },//loss of sense of taste/smell
              });
 
